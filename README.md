@@ -1,4 +1,4 @@
-<h1 align=center>hugo-dead-simple | <a href="" rel="nofollow">demo</a></h1>
+<h1 align=center>hugo-dead-simple | <a href="https://hugo-dead-simple.netlify.app/" rel="nofollow">demo</a></h1>
 
 Dead simple Hugo theme.
 
