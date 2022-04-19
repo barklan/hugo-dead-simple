@@ -1,0 +1,239 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: auto;
+  padding: 1em;
+  line-height: 1.5;
+}
+
+@media screen and (min-width: 760px) {
+  body {
+    margin-left: 10vw;
+    max-width: 68vw;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: #0645ad;
+  transition: all 100ms ease-out;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.imgp {
+  margin: auto;
+}
+
+@media screen and (min-width: 760px) {
+  .imgp {
+    max-width: 80%;
+  }
+}
+
+/* header and footer areas */
+.menu {
+  padding: 0;
+}
+
+.menu li {
+  display: inline-block;
+}
+
+.article-meta,
+.menu a {
+  margin-right: 0.9em;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.menu a:hover {
+  background-color: lightgray;
+}
+
+.menu,
+.article-meta,
+footer {
+  text-align: left;
+}
+
+.title {
+  font-size: 1em;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+hr {
+  border-style: dashed;
+  color: #ddd;
+}
+
+/* code */
+.highlight div,
+pre {
+  border: 1px solid rgb(200, 200, 200);
+  box-shadow: 2px 2px 2px #eee;
+  padding: 0.7em;
+  overflow-x: auto;
+  margin: 0px;
+}
+
+.highlight div pre {
+  border: 0px;
+  padding: 0px 5px;
+  margin: 0px;
+  box-shadow: 0px 0px 0px;
+}
+
+code {
+  background: #f1f1f1;
+  border-radius: 5%;
+  padding-left: 2px;
+  padding-right: 2px;
+  border: 1px solid rgb(187, 187, 187);
+}
+
+pre code {
+  border: none;
+  background: none;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin: 0px;
+}
+
+/* misc elements */
+img,
+iframe,
+video {
+  max-width: 100%;
+}
+
+main {
+  hyphens: none;
+}
+
+blockquote {
+  background: #f9f9f9;
+  border-left: 5px solid #ccc;
+  padding: 3px 1em 3px;
+}
+
+table {
+  border-collapse: collapse;
+  display: block;
+  overflow: auto;
+}
+
+table thead th {
+  border: 1px solid rgb(200, 200, 200);
+}
+
+th,
+td {
+  padding: 4px;
+  border: 1px solid rgb(200, 200, 200);
+}
+
+tr:nth-child(even) {
+  background-color: #f6f8fa;
+}
+
+/* table of contents */
+.toc {
+  background: #f9f9f9 none repeat scroll 0 0;
+  border: 1px solid #aaa;
+  display: table;
+  font-size: 95%;
+  margin-bottom: 1em;
+  padding: 0.4em 1.5em 0.4em 0.2em;
+  width: auto;
+}
+
+@media screen and (min-width: 1150px) {
+  .toc {
+    background: white;
+    font-size: 80%;
+    max-width: 15vw;
+    width: 15vw;
+    position: fixed;
+    top: 2rem;
+    right: 1rem;
+    border-right: 0px;
+    border-top: 0px;
+    border-bottom: 0px;
+    border-left: 1px solid rgb(180, 180, 180);
+  }
+}
+
+.toc li,
+.toc ul,
+.toc ul li {
+  list-style: outside none none !important;
+}
+
+.toc ul {
+  padding-left: 20px;
+}
+
+.toc h4 {
+  margin: 5px;
+}
+
+.date {
+  color: #444;
+  padding-top: 0.1em;
+  font-size: 90%;
+}
+
+.datesub {
+  padding-top: 0px;
+  font-weight: normal;
+  font-size: 0.45em;
+  color: #444;
+}
+
+.post-list {
+  color: #815205;
+  padding-left: 1em;
+}
+
+@media screen and (max-width: 760px) {
+  .katex {
+    font-size: 0.95em !important;
+  }
+}
+
+.bold-post-in-list {
+  font-weight: bold;
+}
+
+.active {
+  background-color: #eff4fa;
+  transition: all 500ms ease-in-out;
+}
+
+figcaption {
+  color: grey;
+  text-align: center;
+}
+
+figcaption h4 {
+  margin-top: 0px;
+  font-weight: normal;
+}
+
+blockquote {
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+blockquote p {
+  margin-top: 0.3em;
+  margin-bottom: 0.3em;
+}

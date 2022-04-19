@@ -1,0 +1,30 @@
+{{ partial "header.html" . }}
+<div class="article-meta">
+  <h1>
+    <span class="title">{{ .Title | markdownify }}</span>
+    {{ if .Params.date }}
+      <div class="datesub">{{ .Date.Format "Jan 2, 2006" }}</div>
+    {{ end }}
+  </h1>
+  {{ with .Params.author }}<h2 class="author">{{ . }}</h2>{{ end }}
+</div>
+
+{{ if .Params.summary }}<p>{{ .Params.summary }}</p>{{ end }}
+
+{{ if .Params.toc }}
+<aside class="hidden lg:block toc" id="tableOfContentContainer">
+
+  <h4>Contents</h3>
+  {{ .TableOfContents }}
+</aside>
+{{ end }}
+
+<main>
+  {{ .Content }}
+</main>
+
+{{ if or .Params.math .Site.Params.math }}
+{{ partial "math.html" . }}
+{{ end }}
+
+{{ partial "footer.html" . }}

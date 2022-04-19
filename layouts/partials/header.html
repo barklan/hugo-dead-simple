@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {{ if .Site.IsServer }}
+      <title>Local Hugo sever</title>
+    {{ else if .IsHome }}
+      <title>{{ .Site.Title }}</title>
+    {{ else }}
+      <title>{{ .Title }} | {{ .Site.Title }}</title>
+    {{ end }}
+    <link rel="stylesheet" href="{{ "/css/style.css" | relURL }}" />
+    <link rel="stylesheet" href="{{ "/css/fonts.css" | relURL }}" />
+    {{ partial "head_custom.html" . }}
+  </head>
+
+  <body>
+    {{ if not (and (eq .Section "paste") ( .IsPage )) }}
+    <nav>
+    <ul class="menu">
+      {{ range .Site.Menus.main }}
+      <li><a class="menu-link" href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+      {{ end }}
+    </ul>
+    </nav>
+    {{ end }}

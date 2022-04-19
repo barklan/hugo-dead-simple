@@ -1,0 +1,32 @@
+baseURL: 'example.com'
+languageCode: en-us
+title: "Example Site"
+menu:
+  main:
+    - name: home
+      url: /
+      weight: 1
+    - name: info
+      url: /info
+      weight: 2
+    - name: categories
+      url: "categories/"
+      weight: 2
+    - name: tags
+      url: "tags/"
+      weight: 3
+
+params:
+  description: "Example Site"
+
+markup:
+  highlight:
+    codeFences: true
+    style: bw
+  goldmark:
+    renderer:
+      unsafe: true
+
+module:
+  imports:
+    - path: github.com/barklan/hugo-dead-simple
