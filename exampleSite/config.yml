@@ -6,15 +6,15 @@ menu:
     - name: home
       url: /
       weight: 1
-    - name: info
-      url: /info
-      weight: 2
     - name: categories
       url: "categories/"
       weight: 2
     - name: tags
       url: "tags/"
       weight: 3
+    - name: info
+      url: /info
+      weight: 4
 
 params:
   description: "Example Site"
