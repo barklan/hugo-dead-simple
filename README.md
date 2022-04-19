@@ -2,8 +2,6 @@
 
 ![screenshot](images/screenshot.png)
 
-Dead simple Hugo theme.
-
 ## Instructions
 
 1. Create repo and copy contents of `exampleSite` into it.
