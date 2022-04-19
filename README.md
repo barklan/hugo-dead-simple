@@ -1,5 +1,7 @@
 <h1 align=center>hugo-dead-simple | <a href="https://hugo-dead-simple.netlify.app/" rel="nofollow">demo</a></h1>
 
+![screenshot](images/screenshot.png)
+
 Dead simple Hugo theme.
 
 ## Instructions
