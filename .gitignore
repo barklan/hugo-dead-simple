@@ -15,6 +15,7 @@
 # vendor/
 
 /exampleSite/public
+/exampleSite/resources
 /exampleSite/.hugo_build.lock
 /exampleSite/go.mod
 /exampleSite/go.sum
