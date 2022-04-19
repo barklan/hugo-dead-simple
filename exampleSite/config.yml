@@ -1,4 +1,4 @@
-baseURL: 'example.com'
+baseURL: 'https://hugo-dead-simple.netlify.app/'
 languageCode: en-us
 title: "Example Site"
 menu:
