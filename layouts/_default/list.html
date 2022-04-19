@@ -8,15 +8,14 @@
 
 {{ if .IsHome }}
   {{ range .Sections }}
-  <li> {{ .CurrentSection.Title }}
-    <ul>
-      {{ range .CurrentSection.RegularPages }}
-      <li>
-        {{ .Page.Title }}
-      </li>
-      {{ end }}
-    </ul>
-  </li>
+  <h1>{{ .CurrentSection.Title }}</h1>
+  <ul>
+    {{ range .CurrentSection.RegularPages }}
+    <li>
+      {{ .Page.Title }}
+    </li>
+    {{ end }}
+  </ul>
   {{ end }}
 {{ else }}
   <ul class="post-list">
