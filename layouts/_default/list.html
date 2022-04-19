@@ -9,10 +9,17 @@
 {{ if .IsHome }}
   {{ range .Sections }}
   <h2>{{ .CurrentSection.Title }}</h2>
-  <ul>
+  <ul class="post-list">
     {{ range .CurrentSection.RegularPages }}
     <li>
-      {{ .Page.Title }}
+      <div style="display: grid; grid-template-columns: 6em auto;">
+        <span class="date">{{ .Date.Format "Jan 2, 2006" }}</span>
+        {{ if .Params.bold }}
+          <a class="bold-post-in-list" href="{{ .RelPermalink }}">{{ .Page.Title | markdownify }}</a>
+        {{ else }}
+          <a href="{{ .RelPermalink }}">{{ .Page.Title | markdownify }}</a>
+        {{ end }}
+      </div>
     </li>
     {{ end }}
   </ul>
@@ -21,10 +28,6 @@
   <ul class="post-list">
     {{ $pages := .Pages }}
     {{ $section := .Section }}
-    {{ if .IsHome }}
-      {{ $pages = .Site.RegularPages }}
-      {{ $section = "post" }}
-    {{ end }}
     {{ range (where $pages "Section" "==" $section ) }}
     <li>
       <div style="display: grid; grid-template-columns: 6em auto;">
