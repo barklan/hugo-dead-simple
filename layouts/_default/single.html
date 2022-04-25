@@ -23,6 +23,8 @@
   {{ .Content }}
 </main>
 
+{{ partial "single_custom.html" . }}
+
 {{ if or .Params.math .Site.Params.math }}
 {{ partial "math.html" . }}
 {{ end }}
