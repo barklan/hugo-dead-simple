@@ -240,6 +240,10 @@ tr:nth-child(even) {
   transition: all 500ms ease-in-out;
 }
 
+figure img {
+  min-width: 100%;
+}
+
 figcaption {
   color: grey;
   text-align: center;
