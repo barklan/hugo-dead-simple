@@ -95,7 +95,7 @@ code {
   background: #f1f1f1;
   border-radius: 5%;
   padding: 0.05em 0.2em 0em 0.2em;
-  border: 1px solid rgb(187, 187, 187);
+  border: 0.05em solid rgb(187, 187, 187);
 }
 
 pre code {

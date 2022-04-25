@@ -4,6 +4,10 @@ body {
 
 code {
   font-family: "Hack", "Lucida Console", Monaco, monospace;
+  font-size: 85%;
+}
+
+pre code {
   font-size: 80%;
 }
 
