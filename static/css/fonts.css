@@ -1,9 +1,10 @@
 body {
-  font-family: Cantarell, Optima, Candara, Calibri, Arial, sans-serif;
+  font-family: sans-serif;
+  /* font-family: "Open Sans", Cantarell; */
 }
 
 code {
-  font-family: "Hack", "Lucida Console", Monaco, monospace;
+  font-family: Liberation Mono, "Hack", "Lucida Console", Monaco, monospace;
   font-size: 85%;
 }
 
