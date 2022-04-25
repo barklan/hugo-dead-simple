@@ -130,6 +130,13 @@ table {
   overflow: auto;
 }
 
+@media screen and (min-width: 760px) {
+  table {
+    display: table !important;
+    margin: auto;
+  }
+}
+
 table thead th {
   border: 1px solid rgb(200, 200, 200);
 }
