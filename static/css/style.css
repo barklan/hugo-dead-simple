@@ -77,11 +77,18 @@ hr {
 /* code */
 .highlight div,
 pre {
-  border: 1px solid rgb(200, 200, 200);
-  box-shadow: 2px 2px 2px #eee;
   padding: 0.7em;
   overflow-x: auto;
   margin: 0px;
+}
+
+@media screen and (min-width: 760px) {
+
+  .highlight div,
+  pre {
+    margin-left: 3em;
+    margin-right: 3em;
+  }
 }
 
 .highlight div pre {
