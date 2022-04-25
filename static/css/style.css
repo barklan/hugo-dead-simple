@@ -58,7 +58,7 @@ a:hover {
 .menu,
 .article-meta,
 footer {
-  text-align: left;
+  text-align: center;
 }
 
 .title {
@@ -167,7 +167,7 @@ tr:nth-child(even) {
     border-right: 0px;
     border-top: 0px;
     border-bottom: 0px;
-    border-left: 1px solid rgb(180, 180, 180);
+    border-left: 1px solid rgb(210, 210, 210);
   }
 }
 
@@ -182,7 +182,10 @@ tr:nth-child(even) {
 }
 
 .toc h4 {
-  margin: 5px;
+  margin-left: 20px;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  font-weight: normal;
 }
 
 .date {
@@ -236,4 +239,10 @@ blockquote {
 blockquote p {
   margin-top: 0.3em;
   margin-bottom: 0.3em;
+}
+
+@media screen and (min-width: 760px) {
+  .list-page-content {
+    margin-left: 15vw;
+  }
 }

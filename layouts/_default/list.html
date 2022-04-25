@@ -1,5 +1,7 @@
 {{ partial "header.html" . }}
 
+<div class="list-page-content">
+
 {{if not .IsHome }}
 <h1>{{ .Title | markdownify }}</h1>
 {{ end }}
@@ -42,5 +44,7 @@
     {{ end }}
   </ul>
 {{ end }}
+
+</div>
 
 {{ partial "footer.html" . }}
