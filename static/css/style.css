@@ -219,6 +219,12 @@ tr:nth-child(even) {
   padding-left: 1em;
 }
 
+@media screen and (min-width: 760px) {
+  .post-list {
+    margin-left: 15vw;
+  }
+}
+
 @media screen and (max-width: 760px) {
   .katex {
     font-size: 0.95em !important;
@@ -254,8 +260,6 @@ blockquote p {
   margin-bottom: 0.3em;
 }
 
-@media screen and (min-width: 760px) {
-  .list-page-content {
-    margin-left: 15vw;
-  }
+.section-title {
+  margin-left: 15vw;
 }

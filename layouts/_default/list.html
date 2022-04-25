@@ -1,7 +1,5 @@
 {{ partial "header.html" . }}
 
-<div class="list-page-content">
-
 {{if not .IsHome }}
 <h1>{{ .Title | markdownify }}</h1>
 {{ end }}
@@ -10,7 +8,7 @@
 
 {{ if .IsHome }}
   {{ range .Sections }}
-  <h2>{{ .CurrentSection.Title }}</h2>
+  <h2 class="section-title">{{ .CurrentSection.Title }}</h2>
   <ul class="post-list">
     {{ range .CurrentSection.RegularPages }}
     <li>
@@ -48,7 +46,5 @@
     {{ end }}
   </ul>
 {{ end }}
-
-</div>
 
 {{ partial "footer.html" . }}
