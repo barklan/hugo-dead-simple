@@ -4,11 +4,11 @@ body {
 
 code {
   font-family: Liberation Mono, "Hack", "Lucida Console", Monaco, monospace;
-  font-size: 85%;
+  font-size: .875em;
 }
 
 pre code {
-  font-size: 85%;
+  font-size: .875em;
 }
 
 @media screen and (max-width: 760px) {
