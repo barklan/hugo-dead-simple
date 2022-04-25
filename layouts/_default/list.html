@@ -15,7 +15,9 @@
     {{ range .CurrentSection.RegularPages }}
     <li>
       <div style="display: grid; grid-template-columns: 6em auto;">
-        <span class="date">{{ .Date.Format "Jan 2, 2006" }}</span>
+        {{ if .CurrentSection.Date }}
+          <span class="date">{{ .Date.Format "Jan 2, 2006" }}</span>
+        {{ end }}
         {{ if .Params.bold }}
           <a class="bold-post-in-list" href="{{ .RelPermalink }}">{{ .Page.Title | markdownify }}</a>
         {{ else }}
@@ -33,7 +35,9 @@
     {{ range (where $pages "Section" "==" $section ) }}
     <li>
       <div style="display: grid; grid-template-columns: 6em auto;">
-        <span class="date">{{ .Date.Format "Jan 2, 2006" }}</span>
+        {{ if .CurrentSection.Date }}
+          <span class="date">{{ .Date.Format "Jan 2, 2006" }}</span>
+        {{ end }}
         {{ if .Params.bold }}
           <a class="bold-post-in-list" href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
         {{ else }}
