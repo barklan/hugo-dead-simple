@@ -1,7 +1,5 @@
 <h1 align=center>hugo-dead-simple | <a href="https://hugo-dead-simple.netlify.app/" rel="nofollow">demo</a></h1>
 
-![screenshot](images/screenshot.png)
-
 ## Instructions
 
 1. Create repo and copy contents of `exampleSite` into it.
