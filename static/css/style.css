@@ -216,16 +216,26 @@ tr:nth-child(even) {
 
 .post-list {
   color: #815205;
-  padding-left: 1em;
+  padding-left: 2em;
 }
 
 @media screen and (min-width: 760px) {
   .post-list {
-    margin-left: 15vw;
+    margin: auto;
+    max-width: 40vw;
+  }
+
+  .home-content {
+    margin: auto;
+    max-width: 40vw;
   }
 }
 
 @media screen and (max-width: 760px) {
+  .post-list {
+    padding-left: 1em;
+  }
+
   .katex {
     font-size: 0.95em !important;
   }
