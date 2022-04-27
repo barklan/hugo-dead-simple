@@ -2,7 +2,6 @@
 
 ## Instructions
 
-1. Create repo and copy contents of `exampleSite` into it.
 2. Initialize go module
 
     ```bash
