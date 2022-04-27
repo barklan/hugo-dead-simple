@@ -2,13 +2,13 @@
 
 ## Instructions
 
-2. Initialize go module
+- Initialize go module
 
     ```bash
     hugo mod init
     ```
 
-3. Fetch theme
+- Fetch theme
 
     ```bash
     hugo mod get -u
