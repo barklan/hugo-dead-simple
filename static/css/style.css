@@ -219,13 +219,13 @@ tr:nth-child(even) {
 
 @media screen and (min-width: 760px) {
   .post-list {
-    margin: auto;
-    max-width: 40vw;
+    margin-left: 20%;
+    max-width: 60vw;
   }
 
   .home-content {
-    margin: auto;
-    max-width: 40vw;
+    margin-left: 20%;
+    max-width: 60vw;
   }
 }
 
@@ -273,5 +273,5 @@ blockquote p {
 }
 
 .section-title {
-  margin-left: 15vw;
+  margin-left: 22%;
 }
