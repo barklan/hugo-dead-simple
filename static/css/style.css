@@ -82,8 +82,8 @@ pre {
   margin: 0px;
 }
 
-.no-border pre {
-  border: none !important;
+.output pre {
+  color: #9a3412;
 }
 
 .highlight div pre {
