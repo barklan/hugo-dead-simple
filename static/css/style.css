@@ -273,7 +273,7 @@ blockquote p {
   display: flex;
 }
 .side-by-side-child {
-  padding: 4px;
+  padding: 2px;
 }
 .side-by-side-child img {
   /* max-height: 50vh; */
