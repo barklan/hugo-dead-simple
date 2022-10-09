@@ -167,10 +167,10 @@ tr:nth-child(even) {
 @media screen and (min-width: 1150px) {
   .toc {
     background: white;
-    font-size: 80%;
+    font-size: 85%;
     max-width: 15vw;
     width: 15vw;
-    position: fixed;
+    position: absolute;
     top: 2rem;
     right: 1rem;
     border-right: 0px;
