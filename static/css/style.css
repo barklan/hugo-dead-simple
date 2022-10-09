@@ -267,3 +267,16 @@ blockquote p {
   margin-top: 0.3em;
   margin-bottom: 0.3em;
 }
+
+/* Two images side by side shortcode */
+.side-by-side-parent {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 5px;
+}
+.side-by-side-child {
+  box-sizing: border-box;
+}
+.side-by-side-child img {
+  width: 100%;
+}
