@@ -278,5 +278,5 @@ blockquote p {
   box-sizing: border-box;
 }
 .side-by-side-child img {
-  width: 100%;
+    height: 100%;
 }
