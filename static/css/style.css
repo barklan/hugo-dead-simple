@@ -270,11 +270,13 @@ blockquote p {
 
 /* Two images side by side shortcode */
 .side-by-side-parent {
-  display: flex;
+  display: block;
+}
+@media screen and (min-width: 760px) {
+  .side-by-side-parent {
+    display: flex;
+  }
 }
 .side-by-side-child {
   padding: 2px;
-}
-.side-by-side-child img {
-  /* max-height: 50vh; */
 }
