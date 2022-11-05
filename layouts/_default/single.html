@@ -12,7 +12,12 @@
 {{ if .Params.summary }}<p>{{ .Params.summary }}</p>{{ end }}
 
 {{ if .Params.toc }}
-<aside class="hidden lg:block toc" id="tableOfContentContainer">
+{{ if .Params.toc_absolute }}
+<aside class="hidden lg:block toc toc-position-absolute" id="tableOfContentContainer">
+{{ else }}
+<aside class="hidden lg:block toc " id="tableOfContentContainer">
+{{ end }}
+
 
   <h3>Contents</h3>
   {{ .TableOfContents }}

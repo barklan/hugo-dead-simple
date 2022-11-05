@@ -170,7 +170,7 @@ tr:nth-child(even) {
     font-size: 85%;
     max-width: 15vw;
     width: 15vw;
-    position: absolute;
+    position: fixed;
     top: 2rem;
     right: 1rem;
     border-right: 0px;
@@ -178,6 +178,10 @@ tr:nth-child(even) {
     border-bottom: 0px;
     border-left: 1px solid rgb(210, 210, 210);
   }
+}
+
+.toc-position-absolute {
+  position: absolute;
 }
 
 .toc li,
