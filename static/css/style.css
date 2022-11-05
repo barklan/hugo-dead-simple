@@ -168,8 +168,9 @@ tr:nth-child(even) {
   .toc {
     background: white;
     font-size: 85%;
-    max-width: 15vw;
-    width: 15vw;
+    max-width: 16vw;
+    width: 16vw;
+    line-height: 1.3;
     position: fixed;
     top: 2rem;
     right: 1rem;
