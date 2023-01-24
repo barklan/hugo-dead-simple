@@ -285,3 +285,7 @@ blockquote p {
 .side-by-side-child {
   padding: 2px;
 }
+
+.active-toc {
+  font-weight: bold;
+}
