@@ -24,6 +24,14 @@
   <h3>Contents</h3>
   {{ .TableOfContents }}
 </aside>
+{{ else }}
+<style>
+@media screen and (min-width: 1150px) {
+  body {
+    margin: auto !important;
+  }
+}
+</style>
 {{ end }}
 
 <main>

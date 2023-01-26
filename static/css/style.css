@@ -10,7 +10,14 @@ body {
 
 @media screen and (min-width: 760px) {
   body {
-    margin-left: 10vw;
+    margin: auto;
+    max-width: 68vw;
+  }
+}
+
+@media screen and (min-width: 1150px) {
+  body {
+    margin-right: 10vw;
     max-width: 68vw;
   }
 }
@@ -173,11 +180,11 @@ tr:nth-child(even) {
     line-height: 1.3;
     position: fixed;
     top: 2rem;
-    right: 1rem;
-    border-right: 0px;
+    left: 1rem;
+    border-right: 1px solid rgb(210, 210, 210);
     border-top: 0px;
     border-bottom: 0px;
-    border-left: 1px solid rgb(210, 210, 210);
+    border-left: 0px;
   }
 }
 
