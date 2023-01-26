@@ -296,3 +296,10 @@ blockquote p {
 .active-toc {
   font-weight: bold;
 }
+
+.ln {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
