@@ -5,7 +5,6 @@ html {
 body {
   margin: auto;
   padding: 1em 1em 2em 1em;
-  line-height: 1.5;
 }
 
 h2 {
@@ -51,10 +50,14 @@ a:hover {
 }
 
 a:visited {
-	color: #795cb2;
+  color: #795cb2;
 }
 
 .toc a:visited {
+  color: #3366cc;
+}
+
+.menu a:visited {
   color: #3366cc;
 }
 
@@ -109,10 +112,11 @@ hr {
 /* code */
 .highlight div,
 pre {
-  background-color: #f5f5f5 !important;
+  background-color: #f8f9fa !important;
   padding: 0.7em;
   overflow-x: auto;
   margin: 0px;
+  border: 1px solid #eaecf0;
 }
 
 .output pre {
@@ -182,9 +186,17 @@ td {
   border: 1px solid rgb(200, 200, 200);
 }
 
-tr:nth-child(even) {
-  background-color: #f6f8fa;
+th {
+  background-color: #eaecf0;
 }
+
+tr {
+  background-color: #f8f9fa;
+}
+
+/* tr:nth-child(even) {
+  background-color: #f6f8fa;
+} */
 
 /* table of contents */
 .toc {
@@ -309,11 +321,13 @@ blockquote p {
 .side-by-side-parent {
   display: block;
 }
+
 @media screen and (min-width: 760px) {
   .side-by-side-parent {
     display: flex;
   }
 }
+
 .side-by-side-child {
   padding: 2px;
 }

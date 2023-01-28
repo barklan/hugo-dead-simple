@@ -1,5 +1,6 @@
 body {
   font-family: "Open Sans", sans-serif;
+  line-height: 1.5;
 }
 
 code {
@@ -28,4 +29,3 @@ pre code {
 .fs80 {
   font-size: 80%;
 }
-
