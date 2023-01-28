@@ -8,9 +8,11 @@ body {
 }
 
 h2 {
+  margin-bottom: 0.25em;
   border-bottom: 1px solid #a2a9b1;
   font-weight: normal;
-  font-size: 1.35em;
+  font-size: 1.5em;
+  font-family: 'Linux Libertine', 'Georgia', 'Times', serif;
 }
 
 .section-title {
@@ -157,12 +159,10 @@ main {
 }
 
 blockquote {
-	overflow: hidden;
-	margin: 1em 0;
-	padding: 0 40px;
-  color: #006400;
+  overflow: hidden;
+  margin: 1em 0;
+  padding: 0 40px;
   line-height: 1.6;
-	font-family: Georgia, 'DejaVu Serif', serif;
 }
 
 table {
