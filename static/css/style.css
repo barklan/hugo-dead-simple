@@ -8,6 +8,24 @@ body {
   line-height: 1.5;
 }
 
+h1 {
+  font-size: 2.2em;
+  color: #704214;
+}
+
+h2 {
+  font-size: 1.8em;
+  color: #704214;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+h4 {
+  font-size: 1.3em;
+}
+
 @media screen and (min-width: 760px) {
   body {
     margin: auto;
