@@ -47,13 +47,6 @@ h4 {
   }
 }
 
-@media screen and (min-width: 1150px) {
-  body {
-    margin-right: 10vw;
-    max-width: 68vw;
-  }
-}
-
 a {
   text-decoration: none;
   color: #3366cc;

@@ -12,6 +12,13 @@
 {{ if .Params.summary }}<p>{{ .Params.summary }}</p>{{ end }}
 
 {{ if .Params.toc }}
+<style>
+@media screen and (min-width: 1150px) {
+  body {
+    margin-right: 10vw !important;
+  }
+}
+</style>
 {{ if .Params.toc_absolute }}
 <aside class="hidden lg:block toc toc-position-absolute" id="tableOfContentContainer">
 {{ else }}
@@ -19,9 +26,10 @@
 <nav id="toc">
 </nav>
 {{ end }}
-  <!-- <p style="font-size: medium; padding-left: 20px;">Contents</p> -->
+  <!-- <p style="font-size: medium; padding-left: 20px;"><a href="#">(Top)</a></p> -->
   {{ .TableOfContents }}
 </aside>
+{{ else }}
 {{ end }}
 
 <main>
