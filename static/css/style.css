@@ -54,6 +54,10 @@ a:visited {
 	color: #795cb2;
 }
 
+.toc a:visited {
+  color: #3366cc;
+}
+
 .imgp {
   margin: auto;
 }
