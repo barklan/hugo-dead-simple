@@ -50,7 +50,6 @@ h4 {
 a {
   text-decoration: none;
   color: #3366cc;
-  transition: all 100ms ease-out;
 }
 
 a:hover {
@@ -96,7 +95,8 @@ img {
 }
 
 .menu a:hover {
-  background-color: lightgray;
+  /* background-color: lightgray; */
+  text-decoration: underline;
 }
 
 .menu,
@@ -304,7 +304,6 @@ tr {
 
 .active {
   background-color: #eff4fa;
-  transition: all 500ms ease-in-out;
 }
 
 figure img {
