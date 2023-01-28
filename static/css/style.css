@@ -14,8 +14,9 @@ h1 {
 }
 
 h2 {
-  font-size: 1.8em;
-  color: #704214;
+  border-bottom: 1px solid #a2a9b1;
+  font-weight: normal;
+  font-size: 1.35em;
 }
 
 .section-title {
@@ -23,11 +24,11 @@ h2 {
 }
 
 h3 {
-  font-size: 1.5em;
+  font-size: 1.2em;
 }
 
 h4 {
-  font-size: 1.3em;
+  font-size: 1.1em;
 }
 
 @media screen and (min-width: 760px) {
