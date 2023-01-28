@@ -7,6 +7,10 @@ body {
   padding: 1em 1em 2em 1em;
 }
 
+h1 {
+  font-family: 'Linux Libertine', 'Georgia', 'Times', serif;
+}
+
 h2 {
   margin-bottom: 0.25em;
   border-bottom: 1px solid #a2a9b1;
