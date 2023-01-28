@@ -18,6 +18,10 @@ h2 {
   color: #704214;
 }
 
+.section-title {
+  text-align: center;
+}
+
 h3 {
   font-size: 1.5em;
 }
@@ -242,7 +246,6 @@ tr:nth-child(even) {
 
 .post-list {
   color: #815205;
-  padding-left: 2em;
 }
 
 @media screen and (min-width: 760px) {
