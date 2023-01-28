@@ -4,8 +4,8 @@ body {
 }
 
 code {
-  font-family: Liberation Mono, "Hack", "Lucida Console", Monaco, monospace;
-  font-size: calc(1.025em * 0.875);
+  font-family: monospace, monospace;
+  font-size: calc(1em * 0.875);
 }
 
 pre code {
