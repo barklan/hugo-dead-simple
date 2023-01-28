@@ -63,15 +63,20 @@ a:visited {
   color: #3366cc;
 }
 
-.imgp {
-  margin: auto;
+img {
+  max-height: 70vh;
 }
 
-@media screen and (min-width: 760px) {
-  .imgp {
-    max-width: 80%;
-  }
+.imgp {
+  margin: auto;
+  text-align: center;
 }
+
+/* @media screen and (min-width: 760px) {
+  .imgp {
+    max-width: 70%;
+  }
+} */
 
 /* header and footer areas */
 .menu {
@@ -226,8 +231,10 @@ tr {
   }
 }
 
-.toc-position-absolute {
-  position: absolute;
+@media screen and (min-width: 1150px) {
+  .toc-position-absolute {
+    position: absolute;
+  }
 }
 
 .toc li,
