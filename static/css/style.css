@@ -42,12 +42,16 @@ h4 {
 
 a {
   text-decoration: none;
-  color: #0645ad;
+  color: #3366cc;
   transition: all 100ms ease-out;
 }
 
 a:hover {
   text-decoration: underline;
+}
+
+a:visited {
+	color: #795cb2;
 }
 
 .imgp {
