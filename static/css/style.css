@@ -86,10 +86,10 @@ img {
 @media screen and (min-width: 1150px) {
   .menu {
     position: fixed;
-    padding: 4px;
+    padding: 4px 4px 4px 10px;
     left: 40px;
     z-index: 9999;
-    border-left: 3px solid gray;
+    border-left: 10px solid #815205;
   }
 }
 
