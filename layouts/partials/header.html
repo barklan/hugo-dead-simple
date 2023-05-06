@@ -13,7 +13,7 @@
   </head>
 
   <body>
-    {{ if not (and (eq .Section "paste") ( .IsPage )) }}
+    {{ if not ( .IsPage ) }}
     <nav>
       <ul class="menu">
         {{ range .Site.Menus.main }}
