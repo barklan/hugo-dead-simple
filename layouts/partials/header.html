@@ -13,7 +13,6 @@
   </head>
 
   <body>
-    {{ if not ( .IsPage ) }}
     <nav>
       <ul class="menu">
         {{ range .Site.Menus.main }}
@@ -21,4 +20,3 @@
         {{ end }}
       </ul>
     </nav>
-    {{ end }}
