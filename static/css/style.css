@@ -81,6 +81,7 @@ img {
 /* header and footer areas */
 .menu {
   padding: 0;
+  background-color: white;
 }
 
 @media screen and (min-width: 1150px) {
