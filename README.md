@@ -15,6 +15,21 @@ Simple hugo theme to be dead easy on the reader.
 - Black and white code blocks
 - Katex math
 
+## Page parameters
+
+```yml
+title: "Post/Page title"
+date: "2023-08-11"
+toc: true  # table of contents
+bold: true  # display post title in bold in posts list
+math: true  # load katex
+categories:
+  - ...
+tags:
+  - ...
+next: true ## show link to next post in footer
+```
+
 ## Install
 
 - Initialize go module
@@ -46,4 +61,7 @@ Simple hugo theme to be dead easy on the reader.
     [build]
     publish = "public"
     command = "hugo --gc --minify"
+
+    [context.production]
+    environment = { HUGO_VERSION = "0.111.3" }
     ```
