@@ -1,5 +1,14 @@
 <!-- Add _blank to all external links -->
 <script defer>
+  document.addEventListener('keydown', function (e) {
+    if (e.keyCode === 72) {
+      window.location.href = "/";
+    }
+    return false;
+  });
+</script>
+
+<script defer>
   var links = document.getElementsByTagName("a");
 
   for (var i = 0, linksLength = links.length; i < linksLength; i++) {
