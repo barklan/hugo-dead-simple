@@ -1,4 +1,0 @@
-[build]
-base = "exampleSite"
-publish = "public"
-command = "hugo --gc --minify"

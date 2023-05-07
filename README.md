@@ -1,4 +1,10 @@
-# hugo-dead-simple
+# Hugo Dead Simple
+
+Simple hugo theme to be dead easy on the reader.
+
+![screenshot](https://github.com/barklan/hugo-dead-simple)
+
+## Features
 
 ## Instructions
 
