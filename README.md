@@ -2,16 +2,33 @@
 
 Simple hugo theme to be dead easy on the reader.
 
-![screenshot](https://github.com/barklan/hugo-dead-simple)
+<p align="middle">
+  <img src="https://raw.githubusercontent.com/barklan/hugo-dead-simple/main/images/screenshot.png" width="49%"/>
+  <img src="https://raw.githubusercontent.com/barklan/hugo-dead-simple/main/images/tn.png" width="49%"/>
+</p>
+
 
 ## Features
 
-## Instructions
+- Simple non-intrusive menu
+- Dynamic wiki-style table of contents
+- Black and white code blocks
+- Katex math
+
+## Install
 
 - Initialize go module
 
     ```bash
     hugo mod init
+    ```
+
+- Add theme to your `config.yml`
+
+    ```yml
+    module:
+      imports:
+        - path: github.com/barklan/hugo-dead-simple
     ```
 
 - Fetch theme
@@ -23,19 +40,7 @@ Simple hugo theme to be dead easy on the reader.
 ## Extra stuff
 
 - Add `favicon.ico` to `/static`
-- Launch with this
-
-    ```bash
-    hugo server --minify -D
-    ```
-
-- Build with this
-
-    ```bash
-    hugo --gc --minify
-    ```
-
-- Deploy to netlify with this `netlify.toml`
+- Deploy your site to Netlify with this `netlify.toml`
 
     ```toml
     [build]
