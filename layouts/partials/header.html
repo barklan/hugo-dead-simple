@@ -7,8 +7,8 @@
     <title>{{ .Site.Title }}</title>
     {{ else }}
     <title>{{ .Title }} | {{ .Site.Title }}</title>
-    {{ end }} <link rel="stylesheet" href="{{ "/css/style.css" | relURL }}" />
-    <link rel="stylesheet" href="{{ "/css/fonts.css" | relURL }}" /> {{ partial
+    {{ end }} <link rel="stylesheet" type="text/css" href="{{ relURL "css/style.css" }}" />
+    <link rel="stylesheet" type="text/css" href="{{ relURL "css/fonts.css" }}" /> {{ partial
     "head_custom.html" . }}
   </head>
 
