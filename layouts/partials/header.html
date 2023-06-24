@@ -13,23 +13,24 @@
   </head>
 
   <body>
-    <nav>
-      <ul class="menu">
-        {{ range .Site.Menus.main }}
-        <li><a class="menu-link" href="{{ .URL | relURL }}">{{ .Name }}</a></li>
-        {{ end }}
-      </ul>
-    </nav>
+    <nav id="sidebar">
+          <ul class="menu">
+            {{ range .Site.Menus.main }}
+            <li><a class="menu-link" href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+            {{ end }}
+          </ul>
 
-    {{ if .Params.toc }}
-    {{ if .Params.toc_absolute }}
-    <aside class="hidden lg:block toc toc-position-absolute" id="tableOfContentContainer">
-    {{ else }}
-    <aside class="hidden lg:block toc " id="tableOfContentContainer">
-    <nav id="toc">
+        {{ if .Params.toc }}
+        {{ if .Params.toc_absolute }}
+        <!-- TODO: this is broken. -->
+        <aside class="hidden lg:block toc toc-position-absolute" id="tableOfContentContainer">
+        {{ else }}
+        <aside class="hidden lg:block toc " id="tableOfContentContainer">
+        <div id="toc">
+        </div>
+        {{ end }}
+          {{ .TableOfContents }}
+        </aside>
+        {{ else }}
+        {{ end }}
     </nav>
-    {{ end }}
-      {{ .TableOfContents }}
-    </aside>
-    {{ else }}
-    {{ end }}
