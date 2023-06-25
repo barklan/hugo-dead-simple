@@ -70,6 +70,7 @@ p {
 h1 {
   /* font-family: "Linux Libertine", "Georgia", "Times", serif; */
   font-weight: normal;
+  margin-bottom: 6px;
 }
 
 h2 {
@@ -361,10 +362,25 @@ tr {
   font-size: 90%;
 }
 
-.datesub {
+#subtitle {
+  margin-top: 0;
   padding-top: 0px;
+  margin-bottom: 30px;
+  font-size: 0.9em;
+}
+
+
+#subtitle a:visited {
+  color: var(--link);
+}
+
+.datesub {
   font-weight: normal;
-  font-size: 0.45em;
+  color: var(--text-dim);
+}
+
+#tags {
+  font-weight: normal;
   color: var(--text-dim);
 }
 
