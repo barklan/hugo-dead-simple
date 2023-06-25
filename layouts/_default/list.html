@@ -1,59 +1,53 @@
 {{ partial "header.html" . }}
 
-<div class="home-content">
-  {{ .Content }}
-</div>
+<div class="home-content">{{ .Content }}</div>
 
-{{ if .IsHome }}
-  {{ range .Sections }}
-  <h2 class="section-title">{{ .CurrentSection.Title }}</h2>
-  <ul class="post-list">
-    {{ range .CurrentSection.RegularPages }}
-    <li>
-      {{ if .CurrentSection.Date }}
-      <div style="display: grid; grid-template-columns: 6em auto;">
-        <span class="date">{{ .Date.Format "Jan 2, 2006" }}</span>
-        {{ if .Params.bold }}
-          <a class="bold-post-in-list" href="{{ .RelPermalink }}">{{ .Page.Title | markdownify }}</a>
-        {{ else }}
-          <a href="{{ .RelPermalink }}">{{ .Page.Title | markdownify }}</a>
-        {{ end }}
-      </div>
+{{ if .IsHome }} {{ range .Sections }}
+<h2 class="section-title">{{ .CurrentSection.Title }}</h2>
+<ul class="post-list">
+  {{ range .CurrentSection.RegularPages }}
+  <li>
+    {{ if .CurrentSection.Date }}
+    <div style="display: grid; grid-template-columns: 6em auto">
+      <span class="date">{{ .Date.Format "Jan 2, 2006" }}</span>
+      {{ if .Params.bold }}
+      <a class="bold-post-in-list" href="{{ .RelPermalink }}"
+        >{{ .Page.Title | markdownify }}</a
+      >
       {{ else }}
-        {{ if .Params.bold }}
-          <a class="bold-post-in-list" href="{{ .RelPermalink }}">{{ .Page.Title | markdownify }}</a>
-        {{ else }}
-          <a href="{{ .RelPermalink }}">{{ .Page.Title | markdownify }}</a>
-        {{ end }}
+      <a href="{{ .RelPermalink }}">{{ .Page.Title | markdownify }}</a>
       {{ end }}
-    </li>
+    </div>
+    {{ else }}
+    <a href="{{ .RelPermalink }}">{{ .Page.Title | markdownify }}</a>
     {{ end }}
-  </ul>
+  </li>
   {{ end }}
-{{ else }}
-  <h2 class="section-title">{{ .CurrentSection.Title }}</h2>
-  <ul class="post-list">
-    {{ range .CurrentSection.RegularPages }}
-    <li>
-      {{ if .CurrentSection.Date }}
-      <div style="display: grid; grid-template-columns: 6em auto;">
-        <span class="date">{{ .Date.Format "Jan 2, 2006" }}</span>
-        {{ if .Params.bold }}
-          <a class="bold-post-in-list" href="{{ .RelPermalink }}">{{ .Page.Title | markdownify }}</a>
-        {{ else }}
-          <a href="{{ .RelPermalink }}">{{ .Page.Title | markdownify }}</a>
-        {{ end }}
-      </div>
+</ul>
+{{ end }} {{ else }}
+<h2 class="section-title">{{ .CurrentSection.Title }}</h2>
+<ul class="post-list">
+  {{ range .CurrentSection.RegularPages }}
+  <li>
+    {{ if .CurrentSection.Date }}
+    <div style="display: grid; grid-template-columns: 6em auto">
+      <span class="date">{{ .Date.Format "Jan 2, 2006" }}</span>
+      {{ if .Params.bold }}
+      <a class="bold-post-in-list" href="{{ .RelPermalink }}"
+        >{{ .Page.Title | markdownify }}</a
+      >
       {{ else }}
-        {{ if .Params.bold }}
-          <a class="bold-post-in-list" href="{{ .RelPermalink }}">{{ .Page.Title | markdownify }}</a>
-        {{ else }}
-          <a href="{{ .RelPermalink }}">{{ .Page.Title | markdownify }}</a>
-        {{ end }}
+      <a href="{{ .RelPermalink }}">{{ .Page.Title | markdownify }}</a>
       {{ end }}
-    </li>
-    {{ end }}
-  </ul>
-{{ end }}
-
-{{ partial "footer.html" . }}
+    </div>
+    {{ else }} {{ if .Params.bold }}
+    <a class="bold-post-in-list" href="{{ .RelPermalink }}"
+      >{{ .Page.Title | markdownify }}</a
+    >
+    {{ else }}
+    <a href="{{ .RelPermalink }}">{{ .Page.Title | markdownify }}</a>
+    {{ end }} {{ end }}
+  </li>
+  {{ end }}
+</ul>
+{{ end }} {{ partial "footer.html" . }}
