@@ -10,10 +10,14 @@ Simple hugo theme to be dead easy on the reader.
 
 ## Features
 
+- Light and dark themes
 - Simple non-intrusive menu
 - Dynamic wiki-style table of contents
-- Black and white code blocks
-- Katex math
+- Code blocks with highlight
+- Katex math (inline and block)
+- Info boxes
+
+[Example site and overview of features.](https://aprilhamer.netlify.app/notes/make-posts-look-good/)
 
 ## Page parameters
 
