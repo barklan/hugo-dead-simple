@@ -16,7 +16,7 @@
     <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
     <meta http-equiv="pragma" content="no-cache" />
 
-    "head_custom.html" . }}
+    {{ "head_custom.html" . }}
   </head>
 
   <body>
@@ -24,7 +24,7 @@
         <div>
           <ul class="menu">
             {{ range .Site.Menus.main }}
-            <li><a tabindex="-1" class="menu-link" href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+            <li><a class="menu-link" href="{{ .URL | relURL }}">{{ .Name }}</a></li>
             {{ end }}
           </ul>
         </div>
