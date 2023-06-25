@@ -1,0 +1,25 @@
+<h3 class="section-title">{{ .CurrentSection.Title }}</h3>
+<ul class="post-list">
+  {{ range .CurrentSection.RegularPages }}
+  <li>
+    {{ if .CurrentSection.Date }}
+    <div style="display: grid; grid-template-columns: 6em auto">
+      <span class="date">{{ .Date.Format "Jan 2, 2006" }}</span>
+      {{ if .Params.bold }}
+      <a class="bold-post-in-list" href="{{ .RelPermalink }}"
+        >{{ .Page.Title | markdownify }}</a
+      >
+      {{ else }}
+      <a href="{{ .RelPermalink }}">{{ .Page.Title | markdownify }}</a>
+      {{ end }}
+    </div>
+    {{ else }} {{ if .Params.bold }}
+    <a class="bold-post-in-list" href="{{ .RelPermalink }}"
+      >{{ .Page.Title | markdownify }}</a
+    >
+    {{ else }}
+    <a href="{{ .RelPermalink }}">{{ .Page.Title | markdownify }}</a>
+    {{ end }} {{ end }}
+  </li>
+  {{ end }}
+</ul>

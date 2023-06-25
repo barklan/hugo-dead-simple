@@ -83,7 +83,7 @@ h2 {
 }
 
 .section-title {
-  text-align: center;
+  text-align: left;
 }
 
 h3 {
@@ -369,7 +369,6 @@ tr {
   font-size: 0.9em;
 }
 
-
 #subtitle a:visited {
   color: var(--link);
 }
@@ -386,6 +385,7 @@ tr {
 
 .post-list {
   color: var(--complimentary);
+  padding-left: 1em;
 }
 
 @media screen and (min-width: 760px) {
@@ -399,10 +399,6 @@ tr {
 }
 
 @media screen and (max-width: 760px) {
-  .post-list {
-    padding-left: 1em;
-  }
-
   .katex {
     font-size: 1.05em !important;
   }
