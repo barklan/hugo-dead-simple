@@ -25,6 +25,7 @@
           const inputs = document.querySelectorAll('input');
           for (let i = 0; i < inputs.length; i++) {
             if (inputs[i].offsetParent !== null) {
+              inputs[i].selectionStart = inputs[i].selectionEnd = inputs[i].value.length;
               inputs[i].focus();
               break;
             }
