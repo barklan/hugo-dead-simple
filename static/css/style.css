@@ -27,8 +27,8 @@
     --code-border: transparent;
     --code-hl: #5a5a5a;
     --border-general: #495057;
-    --table-th: #343434;
-    --table-tr: #2a2a2a;
+    --table-th: #414141;
+    --table-tr: #343434;
     --toc-background: #343434;
     --toc-border: #495057;
   }
@@ -491,4 +491,33 @@ details {
 
 .footnotes {
   margin-top: 60px;
+}
+
+#search-input {
+  width: 30%;
+}
+
+#search-input {
+  width: 80%;
+}
+
+
+@media screen and (min-width: 900px) {
+  #search-input {
+    width: 40%;
+  }
+}
+
+@media screen and (min-width: 1150px) {
+  #search-input {
+    width: 30%;
+  }
+}
+
+input {
+    background-color: var(--background);
+    color: var(--text);
+    border-color: var(--border-general);
+    padding: 4px;
+    border-radius: 4px;
 }

@@ -1,6 +1,15 @@
 <!-- Add _blank to all external links -->
 <script defer>
   document.addEventListener("keydown", function (e) {
+    if (document.activeElement.isContentEditable) {
+        return false;
+    }
+      if (document.activeElement.tagName == "INPUT") {
+          return false;
+      }
+   if (e.altKey || e.ctrlKey || e.shiftKey) {
+        return false;
+    }
     if (e.key === "h") {
       window.location.href = "/";
     } else if (e.key == "t") {
