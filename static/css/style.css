@@ -47,6 +47,16 @@ body {
   padding: 1em 1em 2em 1em;
 }
 
+.main-icon {
+  filter: invert(85%);
+}
+
+@media (prefers-color-scheme: dark) {
+  .main-icon {
+    filter: invert(30%);
+  }
+}
+
 @media screen and (min-width: 1150px) {
   body {
     margin-left: calc(16vw + 40px) !important;
@@ -446,5 +456,5 @@ details {
 }
 
 .footnotes {
-    margin-top: 60px;
+  margin-top: 60px;
 }
