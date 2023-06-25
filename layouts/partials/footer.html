@@ -8,14 +8,17 @@
     {{ if .Site.Params.mainIcon }}
 <style>
     @keyframes main-icon {
-        from {opacity: 0;}
-        to {opacity: 1;}
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
     }
 </style>
-    <div style="animation-duration: 1s;animation-name: main-icon;">
-
+    <div>
       <img loading="eager" class="main-icon" style="position: fixed; z-index: -100; bottom: -2px; left: -0px; max-height: 20vh; transform:
-          rotate(94deg);" src="{{ relURL "/img/rose.svg" }}"/>
+          rotate(94deg); animation-duration: 1s; animation-name: main-icon;" src="{{ relURL "/img/rose.svg" }}"/>
       </div>
     {{ end }}
   </body>
