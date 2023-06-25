@@ -208,6 +208,7 @@ pre {
   overflow-x: auto;
   margin: 0px;
   border: 1px solid var(--code-border);
+  line-height: 1.2;
 }
 
 /* TODO: Remove this */
@@ -459,6 +460,9 @@ blockquote p {
 
 .hl {
   background-color: var(--code-hl);
+  outline-style: solid;
+  outline-color: var(--code-hl);
+  outline-width: 2px;
 }
 
 details {
