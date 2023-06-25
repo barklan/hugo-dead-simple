@@ -11,8 +11,10 @@
     <link rel="stylesheet" type="text/css" href="{{ relURL "css/fonts.css" }}" /> {{ partial
     "head_custom.html" . }}
 
-    {{ range first 1 .Data.Pages }}
+    {{ range .Sections }}
+      {{ range .CurrentSection.RegularPages }}
         <link rel="prefetch" href="{{ .RelPermalink }}/">
+      {{ end }}
     {{ end }}
   </head>
 
