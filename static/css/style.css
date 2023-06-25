@@ -68,7 +68,7 @@ p {
 }
 
 h1 {
-  font-family: "Linux Libertine", "Georgia", "Times", serif;
+  /* font-family: "Linux Libertine", "Georgia", "Times", serif; */
   font-weight: normal;
 }
 
@@ -240,6 +240,7 @@ pre code {
   padding-left: 0px;
   padding-right: 0px;
   margin: 0px;
+  font-size: 0.85em !important;
 }
 
 /* misc elements */
