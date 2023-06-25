@@ -439,3 +439,8 @@ blockquote p {
 .hl {
   background-color: var(--code-hl);
 }
+
+details {
+    padding: 0 0 0 14px;
+    border-left: 2px dashed var(--border-general);
+}
