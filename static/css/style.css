@@ -57,6 +57,12 @@ body {
   }
 }
 
+@media screen and (max-width: 1000px) {
+  .main-icon {
+    display: none;
+  }
+}
+
 @media screen and (min-width: 1150px) {
   body {
     margin-left: calc(16vw + 40px) !important;
