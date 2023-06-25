@@ -1,4 +1,42 @@
+:root {
+  --complimentary: #815205;
+  --text: black;
+  --text-dim: #444;
+  --link: #3366cc;
+  --link-visited: #795cb2;
+  --background: #ffffff;
+  --code-background: #f8f9fa;
+  --code-border: #eaecf0;
+  --code-hl: #e6e6e6;
+  --border-general: #a2a9b1;
+  --table-th: #eaecf0;
+  --table-tr: #f8f9fa;
+  --toc-background: #f9f9f9;
+  --toc-border: #aaa;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --complimentary: #815205;
+    --text: #e5e5e5;
+    --text-dim: #c0c0c0;
+    --link: #8cb4ff;
+    --link-visited: #876dba;
+    --background: #1b1b1b;
+    --code-background: #343434;
+    --code-border: transparent;
+    --code-hl: #5a5a5a;
+    --border-general: #606a73;
+    --table-th: #414141;
+    --table-tr: #343434;
+    --toc-background: #f9f9f9;
+    --toc-border: #aaa;
+  }
+}
+
 html {
+  color: var(--text);
+  background-color: var(--background);
   scroll-behavior: smooth;
 }
 
@@ -23,8 +61,9 @@ h1 {
 }
 
 h2 {
-  margin-bottom: 0.25em;
-  border-bottom: 1px solid #a2a9b1;
+  margin-bottom: 0.5em;
+  margin-top: 1.4em;
+  border-bottom: 1px solid var(--border-general);
   font-weight: normal;
   font-size: 1.5em;
   font-family: "Linux Libertine", "Georgia", "Times", serif;
@@ -36,7 +75,7 @@ h2 {
 
 h3 {
   font-size: 1.2em;
-  margin-bottom: 0;
+  margin-bottom: 0.7em;
   padding-bottom: 0;
 }
 
@@ -55,7 +94,7 @@ h4 {
 
 a {
   text-decoration: none;
-  color: #3366cc;
+  color: var(--link);
 }
 
 a:hover {
@@ -63,15 +102,15 @@ a:hover {
 }
 
 a:visited {
-  color: #795cb2;
+  color: var(--link-visited);
 }
 
 .toc a:visited {
-  color: #3366cc;
+  color: var(--link);
 }
 
 .menu a:visited {
-  color: #3366cc;
+  color: var(--link);
 }
 
 img {
@@ -87,14 +126,14 @@ img {
 /* header and footer areas */
 .menu {
   padding: 0;
-  background-color: white;
+  background-color: var(--background);
 }
 
 @media screen and (min-width: 1150px) {
   .menu {
     padding: 4px 4px 4px 10px;
     z-index: 9999;
-    border-left: 10px solid #815205;
+    border-left: 10px solid var(--complimentary);
   }
 }
 
@@ -116,7 +155,6 @@ img {
 }
 
 .menu a:hover {
-  /* background-color: lightgray; */
   text-decoration: underline;
 }
 
@@ -141,19 +179,20 @@ footer a {
 
 hr {
   border-style: dashed;
-  color: #ddd;
+  color: var(--text-dim);
 }
 
 /* code */
 .highlight div,
 pre {
-  background-color: #f8f9fa !important;
+  background-color: var(--code-background) !important;
   padding: 0.7em;
   overflow-x: auto;
   margin: 0px;
-  border: 1px solid #eaecf0;
+  border: 1px solid var(--code-border);
 }
 
+/* TODO: Remove this */
 .output pre {
   color: #9a3412;
 }
@@ -172,10 +211,10 @@ pre {
 }
 
 code {
-  background: #f8f9fa;
+  background: var(--code-background);
   border-radius: 5%;
   padding: 1px 4px;
-  border: 1px solid #eaecf0;
+  border: 1px solid var(--code-border);
 }
 
 pre code {
@@ -213,28 +252,26 @@ table {
 @media screen and (min-width: 760px) {
   table {
     display: table !important;
-    /* Center tables */
-    /* margin: auto; */
   }
 }
 
 table thead th {
-  border: 1px solid #a2a9b1;
+  border: 1px solid var(--border-general);
 }
 
 th,
 td {
   padding: 4px 8px;
   border: 1px solid rgb(200, 200, 200);
-  border: 1px solid #a2a9b1;
+  border: 1px solid var(--border-general);
 }
 
 th {
-  background-color: #eaecf0;
+  background-color: var(--table-th);
 }
 
 tr {
-  background-color: #f8f9fa;
+  background-color: var(--table-tr);
 }
 
 @media screen and (min-width: 1150px) {
@@ -249,8 +286,8 @@ tr {
 }
 
 .toc {
-  background: #f9f9f9 none repeat scroll 0 0;
-  border: 1px solid #aaa;
+  background: var(--toc-background) none repeat scroll 0 0;
+  border: 1px solid var(--toc-border);
   display: table;
   font-size: 95%;
   margin-bottom: 1em;
@@ -303,7 +340,7 @@ tr {
 }
 
 .date {
-  color: #444;
+  color: var(--text-dim);
   padding-top: 0.1em;
   font-size: 90%;
 }
@@ -312,11 +349,11 @@ tr {
   padding-top: 0px;
   font-weight: normal;
   font-size: 0.45em;
-  color: #444;
+  color: var(--text-dim);
 }
 
 .post-list {
-  color: #815205;
+  color: var(--complimentary);
 }
 
 @media screen and (min-width: 760px) {
@@ -343,16 +380,12 @@ tr {
   font-weight: bold;
 }
 
-.active {
-  background-color: #eff4fa;
-}
-
 figure img {
   min-width: 100%;
 }
 
 figcaption {
-  color: grey;
+  color: var(--text-dim);
   text-align: center;
 }
 
@@ -390,6 +423,7 @@ blockquote p {
   font-weight: bold;
 }
 
+/* TODO: what is this? I can't remember))) */
 .ln {
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -397,4 +431,8 @@ blockquote p {
   user-select: none;
   margin-right: 14px;
   color: rgb(150, 150, 150);
+}
+
+.hl {
+  background-color: var(--code-hl);
 }
