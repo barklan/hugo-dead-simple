@@ -1,8 +1,8 @@
 <form id="search"
     action='{{ with .GetPage "/" }}{{.Permalink}}{{end}}' method="get">
     <label hidden for="search-input">Search site</label>
-    <input type="text" id="search-input" name="query"
+    <input tabindex="-1" type="text" id="search-input" name="query"
     placeholder="search...">
-    <input type="submit" value="search">
+    <input tabindex="-1" type="submit" value="search">
 </form>
 
