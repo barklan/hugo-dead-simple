@@ -10,6 +10,7 @@ Simple hugo theme to be dead easy on the reader.
 ## Features
 
 - Light and dark themes
+- Site-wide search
 - Simple non-intrusive menu
 - Dynamic wiki-style table of contents
 - Code blocks with highlight
