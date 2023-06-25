@@ -4,16 +4,31 @@
     if (document.activeElement.isContentEditable) {
         return false;
     }
-      if (document.activeElement.tagName == "INPUT") {
-          return false;
-      }
-   if (e.altKey || e.ctrlKey || e.shiftKey) {
+    if (document.activeElement.tagName == "INPUT") {
+      return false;
+    }
+    if (e.altKey || e.ctrlKey || e.shiftKey) {
         return false;
     }
-    if (e.key === "h") {
-      window.location.href = "/";
-    } else if (e.key == "t") {
-      window.location.href = "/tags";
+     var key = e.key
+      if (key === "h") {
+        e.preventDefault();
+        e.stopPropagation();
+        window.location.href = "/";
+      } else if (key === "t") {
+        e.preventDefault();
+        e.stopPropagation();
+        window.location.href = "/tags";
+      } else if (key === "i") {
+        e.preventDefault();
+        e.stopPropagation();
+          const inputs = document.querySelectorAll('input');
+          for (let i = 0; i < inputs.length; i++) {
+            if (inputs[i].offsetParent !== null) {
+              inputs[i].focus();
+              break;
+            }
+          }
     }
     return false;
   });
