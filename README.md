@@ -11,6 +11,7 @@ Simple hugo theme to be dead easy on the reader.
 
 - Light and dark themes
 - Site-wide search
+- Keyboard-friendly: `h` to home, `t` to tags, `Tab` to navigate posts and search
 - Simple non-intrusive menu
 - Dynamic wiki-style table of contents
 - Code blocks with highlight
