@@ -241,6 +241,7 @@ pre code {
   padding-right: 0px;
   margin: 0px;
   font-size: 0.82em !important;
+  tab-size: 4;
 }
 
 /* misc elements */
@@ -298,7 +299,7 @@ tr {
     display: flex;
     flex-direction: column;
     left: 20px;
-    max-width: 16vw;
+    max-width: 15vw;
     width: 16vw;
   }
 }
@@ -318,12 +319,19 @@ tr {
   .toc {
     padding: 0;
     background-color: transparent;
-    font-size: 85%;
-    line-height: 1.35;
+    font-size: 82%;
+    line-height: 1.3;
     border-right: 0px;
     border-top: 0px;
     border-bottom: 0px;
     border-left: 0px;
+  }
+
+  #TableOfContents li {
+    max-width: 14vw;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
 
@@ -339,14 +347,19 @@ tr {
   list-style: outside none none !important;
 }
 
-.toc ul {
+/* h2 in toc has 20px padding and h1 should be the title and shouldn't be present in toc */
+#TableOfContents {
+  margin-left: -20px;
+}
+
+#TableOfContents ul {
   padding-left: 20px;
 }
 
-/* h2 in toc has 20px padding and h1 should be the title and shouldn't be present in toc */
+/* TODO: remove this */
 @media screen and (min-width: 1150px) {
   .toc ul {
-    text-indent: -20px;
+    /* text-indent: -20px; */
   }
 }
 
