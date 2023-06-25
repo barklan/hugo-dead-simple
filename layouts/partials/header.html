@@ -13,7 +13,7 @@
 
     {{ range .Sections }}
       {{ range .CurrentSection.RegularPages }}
-        <link rel="prefetch" href="{{ .RelPermalink }}/">
+        <link rel="prefetch" href="{{ .Permalink }}">
       {{ end }}
     {{ end }}
   </head>
