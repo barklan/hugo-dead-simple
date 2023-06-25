@@ -296,7 +296,7 @@ tr {
     position: fixed;
     display: flex;
     flex-direction: column;
-    left: 40px;
+    left: 20px;
     max-width: 16vw;
     width: 16vw;
   }
