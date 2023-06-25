@@ -441,6 +441,10 @@ blockquote p {
 }
 
 details {
-    padding: 0 0 0 14px;
-    border-left: 2px dashed var(--border-general);
+  padding: 0 0 0 14px;
+  border-left: 2px dashed var(--border-general);
+}
+
+.footnotes {
+    margin-top: 60px;
 }
