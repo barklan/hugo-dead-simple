@@ -74,9 +74,9 @@ p {
 }
 
 h1 {
-  /* font-family: "Linux Libertine", "Georgia", "Times", serif; */
-  font-weight: normal;
-  margin-bottom: 6px;
+  font-family: "Linux Libertine", "Georgia", "Times", serif;
+  font-weight: 600;
+  margin-bottom: 2px;
 }
 
 h2 {
@@ -184,7 +184,7 @@ figure {
 
 .menu,
 .article-meta {
-  text-align: center;
+  text-align: left;
 }
 
 @media screen and (min-width: 1150px) {
@@ -520,4 +520,8 @@ input {
     border-color: var(--border-general);
     padding: 4px;
     border-radius: 4px;
+}
+
+#results {
+    padding-left: 16px;
 }
