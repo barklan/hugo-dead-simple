@@ -24,7 +24,7 @@
         <div>
           <ul class="menu">
             {{ range .Site.Menus.main }}
-            <li><a class="menu-link" href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+            <li><a tabindex="-1" class="menu-link" href="{{ .URL | relURL }}">{{ .Name }}</a></li>
             {{ end }}
           </ul>
         </div>
