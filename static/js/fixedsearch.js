@@ -23,8 +23,8 @@ if (typeof variable !== "undefined") {
         search_form.setAttribute("data-focus", search__focus);
 
         /*--------------------------------------------------------------
-        The main keyboard event listener running the show
-        --------------------------------------------------------------*/
+                The main keyboard event listener running the show
+                --------------------------------------------------------------*/
         document.addEventListener("keydown", function(e) {
             // console.log(event); // DEBUG
             // Ctrl + / to show or hide Search
@@ -48,8 +48,8 @@ if (typeof variable !== "undefined") {
         });
 
         /*--------------------------------------------------------------
-        The main keyboard event listener running the show
-        --------------------------------------------------------------*/
+                The main keyboard event listener running the show
+                --------------------------------------------------------------*/
         search_form.addEventListener("keydown", function(e) {
             // Allow ESC (27) to close search box
             if (e.keyCode == 27) {
@@ -108,15 +108,15 @@ if (typeof variable !== "undefined") {
         });
 
         /*--------------------------------------------------------------
-        Load our json data and builds fuse.js search index
-        --------------------------------------------------------------*/
+                Load our json data and builds fuse.js search index
+                --------------------------------------------------------------*/
         search_form.addEventListener("focusin", function(e) {
             search_init(); // try to load the search index
         });
 
         /*--------------------------------------------------------------
-        Make submit button toggle focus
-        --------------------------------------------------------------*/
+                Make submit button toggle focus
+                --------------------------------------------------------------*/
         search_form.addEventListener("submit", function(e) {
             search_toggle_focus(e);
             e.preventDefault();
@@ -124,8 +124,8 @@ if (typeof variable !== "undefined") {
         });
 
         /*--------------------------------------------------------------
-        Remove focus on blur
-        --------------------------------------------------------------*/
+                Remove focus on blur
+                --------------------------------------------------------------*/
         search_form.addEventListener("focusout", function(e) {
             if (e.relatedTarget === null) {
                 search_toggle_focus(e);
@@ -135,8 +135,8 @@ if (typeof variable !== "undefined") {
         });
 
         /*--------------------------------------------------------------
-        Toggle focus UI of form
-        --------------------------------------------------------------*/
+                Toggle focus UI of form
+                --------------------------------------------------------------*/
         function search_toggle_focus(e) {
             // console.log(e); // DEBUG
             // order of operations is very important to keep focus where it should stay
@@ -154,8 +154,8 @@ if (typeof variable !== "undefined") {
         }
 
         /*--------------------------------------------------------------
-        Fetch some json without jquery
-        --------------------------------------------------------------*/
+                Fetch some json without jquery
+                --------------------------------------------------------------*/
         function fetch_JSON(path, callback) {
             var httpRequest = new XMLHttpRequest();
             httpRequest.onreadystatechange = function() {
@@ -171,9 +171,9 @@ if (typeof variable !== "undefined") {
         }
 
         /*--------------------------------------------------------------
-        Load script
-        based on https://stackoverflow.com/a/55451823
-        --------------------------------------------------------------*/
+                Load script
+                based on https://stackoverflow.com/a/55451823
+                --------------------------------------------------------------*/
         function load_script(url) {
             return new Promise(function(resolve, reject) {
                 let script = document.createElement("script");
@@ -192,9 +192,9 @@ if (typeof variable !== "undefined") {
         }
 
         /*--------------------------------------------------------------
-        Load our search index, only executed once
-        on first call of search box (Ctrl + /)
-        --------------------------------------------------------------*/
+                Load our search index, only executed once
+                on first call of search box (Ctrl + /)
+                --------------------------------------------------------------*/
         function search_init() {
             if (first_run) {
                 load_script(window.location.origin + "/js/fuse.js")
@@ -210,15 +210,16 @@ if (typeof variable !== "undefined") {
                                     location: 0,
                                     distance: 100,
                                     threshold: 0.4,
-                                    minMatchCharLength: 2,
+                                    minMatchCharLength: 1,
                                     keys: [
-                                        "permalink",
-                                        "title",
-                                        "date",
-                                        "summary",
-                                        "section",
-                                        "categories",
-                                        "tags",
+                                        { name: "title", weight: 0.8 },
+                                        { name: "permalink", weight: 0.8 },
+                                        { name: "contents", weight: 0.5 },
+                                        { name: "tags", weight: 0.3 },
+                                        { name: "categories", weight: 0.3 },
+                                        { name: "summary", weight: 0.3 },
+                                        { name: "section", weight: 0.3 },
+                                        { name: "categories", weight: 0.3 },
                                     ],
                                 };
 
@@ -239,10 +240,10 @@ if (typeof variable !== "undefined") {
         }
 
         /*--------------------------------------------------------------
-        Using the index we loaded on Ctrl + /, run
-        a search query (for "term") every time a letter is typed
-        in the search box
-        --------------------------------------------------------------*/
+                Using the index we loaded on Ctrl + /, run
+                a search query (for "term") every time a letter is typed
+                in the search box
+                --------------------------------------------------------------*/
         function search_exec(term) {
             let results = fuse.search(term); // the actual query being run using fuse.js
             let search_items = ""; // our results bucket

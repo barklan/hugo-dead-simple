@@ -10,6 +10,6 @@
 				{{- $.Scratch.Set "date" (.Date.Format "2006-01-02") -}}
 			{{- end -}}
 	{{ end }}
-    {{- $index = $index | append (dict "title" ( .Title | plainify ) "permalink" .Permalink "section" (i18n (.Section | title)) "tags" (apply .Params.tags "i18n" "." ) "categories" (apply .Params.categories "i18n" "." ) "summary" (.Params.summary | markdownify | htmlUnescape | plainify) "date" ($.Scratch.Get "date") ) -}}
+    {{- $index = $index | append (dict "title" ( .Title | plainify ) "permalink" .Permalink "contents" .Plain "section" (i18n (.Section | title)) "tags" (apply .Params.tags "i18n" "." ) "categories" (apply .Params.categories "i18n" "." ) "summary" (.Params.summary | markdownify | htmlUnescape | plainify) "date" ($.Scratch.Get "date") ) -}}
 {{- end -}}
 {{- $index | jsonify -}}

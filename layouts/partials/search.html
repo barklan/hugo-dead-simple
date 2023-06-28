@@ -1,23 +1,15 @@
 <!-- layouts/partials/search.html -->
-<form id="search-form" class="noscript" method="GET" action="https://duckduckgo.com/" data-language-prefix="{{ site.LanguagePrefix }}">
-	<div class="search-bar">
-		<input id="search-input" class="search--display" name="q" tabindex="0" autocomplete="off" {{ with site.BaseURL }}value=" site:{{ . }}"{{ end }} placeholder="{{ i18n "search" }}">
-		<input id="search-submit" type="submit" tabindex="-1" value="search">
-	</div>
-	<ul id="search-results" class="search--display"></ul>
-</form>
-<!-- <script src="{{ "/scripts/fuse.js" | relURL }}"></script> -->
-<script src="{{ relURL "/js/fixedsearch.js" }}"></script>
+
 
 <style>
 	#search-form {
 		display: block;
 		position: fixed;
 		top: 4px;
-		right: 0;
+		right: 60%;
 		margin: 0;
 		padding: 0;
-		min-width: var(--icon-size, 1.2rem);
+		min-width: 20rem;
 		max-width: 20rem;
 		max-height: 100vh;
 		z-index: 1000;
@@ -44,7 +36,7 @@
 	}
 
 	#search-form[data-focus='true'] .search-bar {
-		border: 2.5px solid rgb(var(--accent-color, '0,0,255'));
+        border: 2px solid black;
 	}
 
 	#search-form[data-focus='true'] .search-bar:not(:focus-within) {
@@ -70,7 +62,7 @@
 	}
 
 	#search-submit {
-		display: block;
+		display: none;
 		padding: 0;
         margin: 10px;
 		background: inherit;
@@ -92,7 +84,7 @@
 		overflow-x: hidden;
 		overflow-y: auto;
 
-		backdrop-filter: blur(var(--page-color-blur, 2px));
+        background-color: black;
 		border: 2.5px solid;
 		color: rgb(var(--text-color, '3,3,3'));
 		font-size: var(--s-2, 0.8rem);
@@ -155,3 +147,13 @@
 		display: none;
 	}
 </style>
+
+<form id="search-form" class="noscript" method="GET" action="https://duckduckgo.com/" data-language-prefix="{{ site.LanguagePrefix }}">
+	<div class="search-bar">
+		<input id="search-input" class="search--display" name="q" tabindex="0" autocomplete="off" {{ with site.BaseURL }}value=""{{ end }} placeholder="{{ i18n "search" }}">
+		<input id="search-submit" type="submit" tabindex="-1" value="search">
+	</div>
+	<ul id="search-results" class="search--display"></ul>
+</form>
+<!-- <script src="{{ "/scripts/fuse.js" | relURL }}"></script> -->
+<script src="{{ relURL "/js/fixedsearch.js" }}"></script>

@@ -63,9 +63,17 @@ body {
   }
 }
 
+@media screen and (min-width: 760px) {
+  body {
+    margin: auto;
+    max-width: 68vw;
+  }
+}
+
 @media screen and (min-width: 1150px) {
   body {
-    margin-left: calc(16vw + 40px) !important;
+    margin: auto;
+    max-width: 62vw;
   }
 }
 
@@ -104,12 +112,6 @@ h4 {
   padding-bottom: 0;
 }
 
-@media screen and (min-width: 760px) {
-  body {
-    margin: auto;
-    max-width: 68vw;
-  }
-}
 
 a {
   text-decoration: none;
@@ -317,7 +319,7 @@ tr {
   .toc {
     padding: 0;
     background-color: transparent;
-    font-size: 82%;
+    font-size: 80%;
     line-height: 1.3;
     border-right: 0px;
     border-top: 0px;
@@ -326,7 +328,7 @@ tr {
   }
 
   #TableOfContents li {
-    max-width: 14vw;
+    max-width: 13vw;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -346,8 +348,11 @@ tr {
 }
 
 /* h2 in toc has 20px padding and h1 should be the title and shouldn't be present in toc */
-#TableOfContents {
-  margin-left: -20px;
+
+@media screen and (min-width: 1150px) {
+  #TableOfContents {
+    margin-left: -32px;
+  }
 }
 
 #TableOfContents ul {
