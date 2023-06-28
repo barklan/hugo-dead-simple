@@ -452,14 +452,14 @@ blockquote p {
   font-weight: bold;
 }
 
-/* TODO: what is this? I can't remember))) */
+/*  TODO: what is this? I can't remember))) */
 .ln {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
   margin-right: 14px;
-  color: rgb(150, 150, 150);
+  /* color: rgb(150, 150, 150); */
 }
 
 .hl {
