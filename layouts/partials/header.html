@@ -20,14 +20,15 @@
   </head>
 
   <body>
-    <nav id="sidebar">
-        <div>
+        {{ if not .Params.nomenu }}
+        <nav>
           <ul class="menu">
             {{ range .Site.Menus.main }}
                 <li><a tabindex="-1" class="menu-link" href="{{ .URL | relURL }}">{{ safeHTML .Name }}</a></li>
             {{ end }}
           </ul>
-        </div>
+        </nav>
+        {{ end }}
 
         {{ if .Params.toc }}
         {{ if .Params.toc_absolute }}
@@ -42,4 +43,3 @@
         </aside>
         {{ else }}
         {{ end }}
-    </nav>

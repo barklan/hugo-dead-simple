@@ -155,6 +155,7 @@ figure {
 
 @media screen and (min-width: 1150px) {
   .menu {
+    left: 20px;
     padding: 0px 4px 0px 14px;
     z-index: 9999;
     border-left: 10px solid var(--complimentary);
@@ -163,12 +164,6 @@ figure {
 
 .menu li {
   display: inline-block;
-}
-
-@media screen and (min-width: 1150px) {
-  .menu li {
-    display: block;
-  }
 }
 
 .article-meta,
@@ -182,7 +177,6 @@ figure {
   text-decoration: underline;
 }
 
-.menu,
 .article-meta {
   text-align: left;
 }
@@ -300,10 +294,8 @@ tr {
 }
 
 @media screen and (min-width: 1150px) {
-  #sidebar {
+  #tableOfContentContainer {
     position: fixed;
-    display: flex;
-    flex-direction: column;
     left: 20px;
     max-width: 15vw;
     width: 16vw;
@@ -360,13 +352,6 @@ tr {
 
 #TableOfContents ul {
   padding-left: 20px;
-}
-
-/* TODO: remove this */
-@media screen and (min-width: 1150px) {
-  .toc ul {
-    /* text-indent: -20px; */
-  }
 }
 
 .toc h3 {
@@ -501,7 +486,6 @@ details {
   width: 80%;
 }
 
-
 @media screen and (min-width: 900px) {
   #search-input {
     width: 40%;
@@ -514,18 +498,19 @@ details {
   }
 }
 
+/* Main page search */
 input {
-    background-color: var(--background);
-    color: var(--text);
-    border-color: var(--border-general);
-    padding: 4px;
-    border-radius: 4px;
+  background-color: var(--background);
+  color: var(--text);
+  border-color: var(--border-general);
+  padding: 4px;
+  border-radius: 4px;
 }
 
 #results {
-    padding-left: 16px;
+  padding-left: 16px;
 }
 
 .terms {
-    padding-left: 16px;
+  padding-left: 16px;
 }
