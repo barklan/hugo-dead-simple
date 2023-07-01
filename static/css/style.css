@@ -365,15 +365,21 @@ tr {
   font-size: 90%;
 }
 
-#subtitle {
+#single-meta {
   margin-top: 0;
   padding-top: 0px;
   margin-bottom: 30px;
   font-size: 0.9em;
 }
 
-#subtitle a:visited {
+#single-meta a:visited {
   color: var(--link);
+}
+
+#subtitle {
+  margin-top: -8px;
+  font-size: 1.2em;
+  color: var(--text-dim);
 }
 
 .datesub {
@@ -384,6 +390,14 @@ tr {
 #tags {
   font-weight: normal;
   color: var(--text-dim);
+}
+
+#tags a {
+  filter: brightness(80%);
+}
+
+#tags a:visited {
+  filter: brightness(80%);
 }
 
 .post-list {
