@@ -1,0 +1,43 @@
+/* POST META */
+.date {
+  color: var(--text-dim);
+  padding-top: 0.1em;
+  font-size: 90%;
+}
+
+#single-meta {
+  margin-top: 0;
+  padding-top: 0px;
+  margin-bottom: 30px;
+  font-size: 0.9em;
+}
+
+#single-meta a:visited {
+  color: var(--link);
+}
+
+#subtitle {
+  margin-top: -8px;
+  font-size: 1.2em;
+  color: var(--text-dim);
+}
+
+.datesub {
+  font-weight: normal;
+  color: var(--text-dim);
+}
+
+#tags {
+  font-weight: normal;
+  color: var(--text-dim);
+}
+
+#tags a {
+  filter: brightness(80%);
+}
+
+#tags a:visited {
+  filter: brightness(80%);
+}
+
+

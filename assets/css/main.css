@@ -1,0 +1,284 @@
+:root {
+  --complimentary: #815205;
+  --text: black;
+  --text-dim: #444;
+  --link: #3366cc;
+  --link-visited: #795cb2;
+  --background: #ffffff;
+  --code-background: #f8f9fa;
+  --code-border: #eaecf0;
+  --code-hl: #e6e6e6;
+  --border-general: #cccfd4;
+  --table-th: #e1e5ea;
+  --table-tr: #edeff2;
+  --toc-background: #f9f9f9;
+  --toc-border: #aaa;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --complimentary: #815205;
+    --text: #d8d8d8;
+    --text-dim: #a7a7a7;
+    --link: #8cb4ff;
+    --link-visited: #876dba;
+    --background: #1b1b1b;
+    --code-background: #272727;
+    --code-border: transparent;
+    --code-hl: #5a5a5a;
+    --border-general: #495057;
+    --table-th: #414141;
+    --table-tr: #343434;
+    --toc-background: #343434;
+    --toc-border: #495057;
+  }
+}
+
+/* TODO: add iframe margins */
+
+/* HTML & BODY */
+html {
+  color: var(--text);
+  background-color: var(--background);
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: auto;
+  padding: 1em 1em 2em 1em;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.5;
+}
+
+@keyframes rose-icon {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.rose-icon {
+  filter: invert(85%);
+  position: fixed;
+  z-index: -100;
+  bottom: -2px;
+  left: -0px;
+  max-height: 20vh;
+  transform: rotate(94deg);
+  animation-duration: 1s;
+  animation-name: rose-icon;
+}
+
+@media (prefers-color-scheme: dark) {
+  .rose-icon {
+    filter: invert(30%);
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .rose-icon {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 760px) {
+  body {
+    margin: auto;
+    max-width: 68vw;
+  }
+}
+
+@media screen and (min-width: 1150px) {
+  body {
+    margin: auto;
+    max-width: 62vw;
+  }
+}
+
+main {
+  hyphens: none;
+}
+
+/* BASIC HTML ELEMENTS */
+p {
+  margin: 0.5em 0;
+}
+
+h1 {
+  font-family: "Linux Libertine", "Georgia", "Times", serif;
+  margin-bottom: 2px;
+}
+
+h2 {
+  margin-bottom: 0.5em;
+  margin-top: 1.4em;
+  border-bottom: 1px solid var(--border-general);
+  font-weight: normal;
+  font-size: 1.7em;
+  font-family: "Linux Libertine", "Georgia", "Times", serif;
+}
+
+h3 {
+  font-size: 1.3em;
+  margin-bottom: 0.7em;
+  padding-bottom: 0;
+}
+
+h4 {
+  font-size: 1.1em;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  font-style: oblique;
+  font-weight: normal;
+}
+
+a {
+  text-decoration: none;
+  color: var(--link);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:visited {
+  color: var(--link-visited);
+}
+
+img {
+  max-height: 70vh;
+  margin: 0.8em 0;
+}
+
+.imgp {
+  margin: auto;
+  text-align: center;
+}
+
+figure {
+  margin: auto;
+  text-align: center;
+}
+
+figcaption {
+  color: var(--text-dim);
+  text-align: center;
+}
+
+figcaption h4 {
+  margin-top: 0px;
+  font-weight: normal;
+}
+
+hr {
+  border-style: dashed;
+  color: var(--text-dim);
+}
+
+img,
+iframe,
+video {
+  max-width: 100%;
+}
+
+blockquote {
+  overflow: hidden;
+  margin: 1em 0;
+  padding: 0 40px;
+  line-height: 1.6;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+blockquote p {
+  margin-top: 0.3em;
+  margin-bottom: 0.3em;
+}
+
+details {
+  padding: 0 0 0 14px;
+  border-left: 2px dashed var(--border-general);
+}
+
+mark {
+  padding: 0 2px 0 2px;
+}
+
+/* MENU */
+.menu {
+  padding: 0;
+}
+
+@media screen and (min-width: 1150px) {
+  .menu {
+    padding: 0px 4px 0px 14px;
+    z-index: 9999;
+    border-left: 10px solid var(--complimentary);
+  }
+}
+
+.menu li {
+  display: inline-block;
+}
+
+.menu a {
+  margin-right: 1.1em;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.menu a:visited {
+  color: var(--link);
+}
+
+.menu a:hover {
+  text-decoration: underline;
+}
+
+/* MISC */
+.post-list {
+  color: var(--complimentary);
+  padding-left: 1em;
+}
+
+@media screen and (min-width: 760px) {
+  .post-list {
+    max-width: 60vw;
+  }
+}
+
+.bold-post-in-list {
+  font-weight: bold;
+}
+
+@media screen and (max-width: 760px) {
+  .katex {
+    font-size: 1.05em !important;
+  }
+}
+
+/* Two images side by side shortcode */
+.side-by-side-parent {
+  display: block;
+}
+
+@media screen and (min-width: 760px) {
+  .side-by-side-parent {
+    display: flex;
+  }
+}
+
+.side-by-side-child {
+  padding: 2px;
+}
+
+.footnotes {
+  margin-top: 60px;
+}
+
+.terms {
+  padding-left: 16px;
+}
+

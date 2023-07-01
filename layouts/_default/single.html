@@ -1,7 +1,7 @@
 {{ partial "header.html" . }}
-<div class="article-meta">
+<div>
   <h1>
-    <span class="title">{{ .Title | markdownify }}</span>
+    {{ .Title | markdownify }}
   </h1>
   <div id="single-meta">
     {{ if .Params.subtitle }}
@@ -11,7 +11,7 @@
         <span class="datesub">{{ .Date.Format "Jan 2, 2006" }}{{ if .GitInfo }} &nbsp;│&nbsp; m. {{
             .Lastmod.Format "Jan 2, 2006" }} by {{ .GitInfo.AuthorName }}{{ end }}</span>
     {{ end }} {{ partial "tags.html" .}}
-      </div>
+  </div>
 </div>
 
 {{ if .Params.toc }}

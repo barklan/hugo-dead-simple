@@ -1,0 +1,33 @@
+/* TABLES */
+table {
+  border-collapse: collapse;
+  display: block;
+  overflow: auto;
+}
+
+@media screen and (min-width: 760px) {
+  table {
+    display: table !important;
+  }
+}
+
+table thead th {
+  border: 1px solid var(--border-general);
+}
+
+th,
+td {
+  padding: 4px 8px;
+  border: 1px solid rgb(200, 200, 200);
+  border: 1px solid var(--border-general);
+}
+
+th {
+  background-color: var(--table-th);
+}
+
+tr {
+  background-color: var(--table-tr);
+}
+
+

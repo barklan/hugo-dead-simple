@@ -38,7 +38,15 @@
     {{ else }}
         <title>{{ .Title }} | {{ .Site.Title }}</title>
     {{ end }}
-    <link rel="stylesheet" type="text/css" href="{{ relURL "css/style.css" }}" />
+
+    {{ $CSS := slice
+        (resources.Get "css/main.css") 
+        (resources.Get "css/code.css") 
+        (resources.Get "css/tables.css") 
+        (resources.Get "css/toc.css") 
+        (resources.Get "css/post_meta.css") 
+    | resources.Concat "style.css" | minify | fingerprint }}
+    <link rel="stylesheet" type="text/css" href="{{ $CSS.RelPermalink }}" media="all">
   </head>
 
   <body>
