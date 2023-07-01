@@ -464,14 +464,14 @@ blockquote p {
   font-weight: bold;
 }
 
-/*  TODO: what is this? I can't remember))) */
+/* Line numbers in code blocks. */
 .ln {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
   margin-right: 14px;
-  /* color: rgb(150, 150, 150); */
+  color: rgb(150, 150, 150);
 }
 
 .hl {
