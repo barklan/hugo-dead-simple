@@ -72,6 +72,8 @@
         (resources.Get "css/tables.css") 
     | resources.Concat "asyncstyle.css" | minify | fingerprint }}
     <link rel="stylesheet" type="text/css" href="{{ $CSSAsync.RelPermalink }}" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+
   </head>
 
   <body>

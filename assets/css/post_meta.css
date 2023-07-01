@@ -1,4 +1,12 @@
 /* POST META */
+#single-header {
+    border: 2px solid var(--complimentary);
+    border-radius: 2px;
+    padding: 8px 8px 12px 12px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
 .date {
   color: var(--text-dim);
   padding-top: 0.1em;
@@ -8,7 +16,6 @@
 #single-meta {
   margin-top: 0;
   padding-top: 0px;
-  margin-bottom: 30px;
   font-size: 0.9em;
 }
 
@@ -17,8 +24,9 @@
 }
 
 #subtitle {
+  font-family: "Linux Libertine", "Georgia", "Times", serif;
   margin-top: -8px;
-  font-size: 1.2em;
+  font-size: 1.5em;
   color: var(--text-dim);
 }
 

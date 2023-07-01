@@ -1,7 +1,6 @@
 .menu {
   padding: 0px 4px 0px 14px;
   z-index: 9999;
-  border-left: 10px solid var(--complimentary);
 }
 
 .menu li {
