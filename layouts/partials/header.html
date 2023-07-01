@@ -1,6 +1,23 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}">
   <head>
+    <style>
+        :root {
+          --background: #ffffff;
+        }
+        @media (prefers-color-scheme: dark) {
+          :root {
+            --background: #1b1b1b;
+          }
+        }
+        html {
+            background-color: var(--background);
+        }
+        body {
+            display: none;
+        }
+    </style>
+
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 

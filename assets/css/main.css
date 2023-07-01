@@ -4,7 +4,6 @@
   --text-dim: #444;
   --link: #3366cc;
   --link-visited: #795cb2;
-  --background: #ffffff;
   --code-background: #f8f9fa;
   --code-border: #eaecf0;
   --code-hl: #e6e6e6;
@@ -22,7 +21,6 @@
     --text-dim: #a7a7a7;
     --link: #8cb4ff;
     --link-visited: #876dba;
-    --background: #1b1b1b;
     --code-background: #272727;
     --code-border: transparent;
     --code-hl: #5a5a5a;
@@ -44,6 +42,7 @@ html {
 }
 
 body {
+  display: block;
   margin: auto;
   padding: 1em 1em 2em 1em;
   font-family: "Open Sans", sans-serif;
