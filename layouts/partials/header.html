@@ -50,7 +50,7 @@
         (resources.Get "css/search.css") 
         (resources.Get "css/rose.css") 
     | resources.Concat "style.css" | minify | fingerprint }}
-    <link rel="stylesheet" type="text/css" href="{{ $CSS.RelPermalink }}" media="all">
+    <link rel="stylesheet" type="text/css" href="{{ $CSS.RelPermalink }}" media="print" onload="this.media='all'">
   </head>
 
   <body>
