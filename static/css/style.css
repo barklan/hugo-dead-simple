@@ -47,18 +47,18 @@ body {
   padding: 1em 1em 2em 1em;
 }
 
-.main-icon {
+.rose-icon {
   filter: invert(85%);
 }
 
 @media (prefers-color-scheme: dark) {
-  .main-icon {
+  .rose-icon {
     filter: invert(30%);
   }
 }
 
 @media screen and (max-width: 1000px) {
-  .main-icon {
+  .rose-icon {
     display: none;
   }
 }
