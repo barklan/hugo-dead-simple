@@ -1,0 +1,45 @@
+img {
+  max-height: 70vh;
+  margin: 0.8em 0;
+}
+
+.imgp {
+  margin: auto;
+  text-align: center;
+}
+
+figure {
+  margin: auto;
+  text-align: center;
+}
+
+figcaption {
+  color: var(--text-dim);
+  text-align: center;
+}
+
+figcaption h4 {
+  margin-top: 0px;
+  font-weight: normal;
+}
+
+img,
+iframe,
+video {
+  max-width: 100%;
+}
+
+/* Two images side by side shortcode */
+.side-by-side-parent {
+  display: block;
+}
+
+@media screen and (min-width: 760px) {
+  .side-by-side-parent {
+    display: flex;
+  }
+}
+
+.side-by-side-child {
+  padding: 2px;
+}
