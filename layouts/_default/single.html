@@ -1,4 +1,7 @@
 {{ partial "header.html" . }}
+
+
+{{ if not .Params.notitle }}
 <div id="single-header">
   <h1>
     {{ .Title | markdownify }}
@@ -13,6 +16,7 @@
     {{ end }} {{ partial "tags.html" .}}
   </div>
 </div>
+{{ end }}
 
 {{ if .Params.toc }}
 <aside class="hidden lg:block toc " id="tableOfContentContainer">
