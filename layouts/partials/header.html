@@ -34,14 +34,7 @@
         {{ end }}
 
         {{ if .Params.toc }}
-        {{ if .Params.toc_absolute }}
-        <!-- TODO: this is broken. -->
-        <aside class="hidden lg:block toc toc-position-absolute" id="tableOfContentContainer">
-        {{ else }}
         <aside class="hidden lg:block toc " id="tableOfContentContainer">
-        <div id="toc">
-        </div>
-        {{ end }}
           {{ .TableOfContents }}
         </aside>
         {{ else }}

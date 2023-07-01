@@ -112,7 +112,6 @@ h4 {
   padding-bottom: 0;
 }
 
-
 a {
   text-decoration: none;
   color: var(--link);
@@ -299,8 +298,9 @@ tr {
   #tableOfContentContainer {
     position: fixed;
     left: 20px;
+    top: 18px;
     max-width: 15vw;
-    width: 16vw;
+    width: 15vw;
   }
 }
 
@@ -327,17 +327,16 @@ tr {
     border-left: 0px;
   }
 
+  #TableOfContents {
+    max-height: 90vh;
+    overflow-y: scroll;
+  }
+
   #TableOfContents li {
     max-width: 13vw;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-  }
-}
-
-@media screen and (min-width: 1150px) {
-  .toc-position-absolute {
-    position: absolute;
   }
 }
 
