@@ -161,9 +161,8 @@ figure {
   display: inline-block;
 }
 
-.article-meta,
 .menu a {
-  margin-right: 0.9em;
+  margin-right: 1.1em;
   text-decoration: none;
   border-radius: 5px;
 }
