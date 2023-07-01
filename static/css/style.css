@@ -83,7 +83,6 @@ p {
 
 h1 {
   font-family: "Linux Libertine", "Georgia", "Times", serif;
-  font-weight: 600;
   margin-bottom: 2px;
 }
 
@@ -94,10 +93,6 @@ h2 {
   font-weight: normal;
   font-size: 1.5em;
   font-family: "Linux Libertine", "Georgia", "Times", serif;
-}
-
-.section-title {
-  text-align: left;
 }
 
 h3 {
@@ -329,7 +324,7 @@ tr {
 
   #TableOfContents {
     max-height: 90vh;
-    overflow-y: scroll;
+    overflow-y: auto;
   }
 
   #TableOfContents li {
