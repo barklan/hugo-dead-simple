@@ -3,24 +3,9 @@
 <h1>{{ .Title }}</h1>
 <ul class="post-list">
     {{ range .Pages }}
-    <li>
-      {{ if .CurrentSection.Date }}
-      <div style="display: grid; grid-template-columns: 6em auto;">
-        <span class="date">{{ .Date.Format "Jan 2, 2006" }}</span>
-        {{ if .Params.bold }}
-          <a class="bold-post-in-list" href="{{ .RelPermalink }}">{{ .Page.Title | markdownify }}</a>
-        {{ else }}
-          <a href="{{ .RelPermalink }}">{{ .Page.Title | markdownify }}</a>
-        {{ end }}
-      </div>
-      {{ else }}
-        {{ if .Params.bold }}
-          <a class="bold-post-in-list" href="{{ .RelPermalink }}">{{ .Page.Title | markdownify }}</a>
-        {{ else }}
-          <a href="{{ .RelPermalink }}">{{ .Page.Title | markdownify }}</a>
-        {{ end }}
-      {{ end }}
-    </li>
+
+    {{ partial "post_row.html" . }}
+
     {{ end }}
   </ul>
 

@@ -23,5 +23,15 @@
 
 <main>{{ .Content }}</main>
 
-{{ partial "single_custom.html" . }} {{ if or .Params.math .Site.Params.math }}
-{{ partial "math.html" . }} {{ end }} {{ partial "footer.html" . }}
+{{ if .Params.Next }}
+    <br>
+    <hr>
+    {{ with .PrevInSection }}
+      Next: <a href="{{ .Permalink }}">{{ .Title }}</a>
+    {{ end }}
+{{ end }}
+
+{{ if .Params.math }}
+    {{ partial "math.html" . }}
+{{ end }}
+{{ partial "footer.html" . }}

@@ -10,14 +10,35 @@
     <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
     <meta http-equiv="pragma" content="no-cache" />
 
-    {{ if .IsHome }}
-    <title>{{ .Site.Title }}</title>
-    {{ else }}
-    <title>{{ .Title }} | {{ .Site.Title }}</title>
-    {{ end }} <link rel="stylesheet" type="text/css" href="{{ relURL "css/style.css" }}" />
-    <link rel="stylesheet" type="text/css" href="{{ relURL "css/fonts.css" }}" />
+    <link rel="apple-touch-icon" sizes="57x57" href="{{ relURL "apple-icon-57x57.png" }}">
+    <link rel="apple-touch-icon" sizes="60x60" href="{{ relURL "apple-icon-60x60.png" }}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ relURL "apple-icon-72x72.png" }}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{ relURL "apple-icon-76x76.png" }}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{ relURL "apple-icon-114x114.png" }}">
+    <link rel="apple-touch-icon" sizes="120x120" href="{{ relURL "apple-icon-120x120.png" }}">
+    <link rel="apple-touch-icon" sizes="144x144" href="{{ relURL "apple-icon-144x144.png" }}">
+    <link rel="apple-touch-icon" sizes="152x152" href="{{ relURL "apple-icon-152x152.png" }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ relURL "apple-icon-180x180.png" }}">
+    <link rel="icon" type="image/png" sizes="192x192" href="{{ relURL "android-icon-192x192.png" }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ relURL "favicon-32x32.png" }}">
+    <link rel="icon" type="image/png" sizes="96x96" href="{{ relURL "favicon-96x96.png" }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ relURL "favicon-16x16.png" }}">
+    <link rel="manifest" href="{{ relURL "manifest.json" }}">
+    <meta name="msapplication-TileColor" content="pink">
+    <meta name="msapplication-TileImage" content="{{ relURL "ms-icon-144x144.png" }}">
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1b1b1b" />
 
-    {{ partial "head_custom.html" . }}
+    {{ with .OutputFormats.Get "rss" -}}
+        {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+    {{ end -}}
+
+    {{ if .IsHome }}
+        <title>{{ .Site.Title }}</title>
+    {{ else }}
+        <title>{{ .Title }} | {{ .Site.Title }}</title>
+    {{ end }}
+    <link rel="stylesheet" type="text/css" href="{{ relURL "css/style.css" }}" />
   </head>
 
   <body>

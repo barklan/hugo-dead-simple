@@ -45,10 +45,29 @@ html {
 body {
   margin: auto;
   padding: 1em 1em 2em 1em;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.5;
+}
+
+@keyframes rose-icon {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .rose-icon {
   filter: invert(85%);
+  position: fixed;
+  z-index: -100;
+  bottom: -2px;
+  left: -0px;
+  max-height: 20vh;
+  transform: rotate(94deg);
+  animation-duration: 1s;
+  animation-name: rose-icon;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -106,7 +125,7 @@ h4 {
   margin-bottom: 0;
   padding-bottom: 0;
   font-style: oblique;
-  font-weight: normal
+  font-weight: normal;
 }
 
 a {
@@ -204,7 +223,6 @@ pre {
   overflow-x: auto;
   margin: 0px;
   border: 1px solid var(--code-border);
-  line-height: 1.2;
 }
 
 /* TODO: Remove this */
@@ -228,6 +246,8 @@ code {
   border-radius: 5%;
   padding: 1px 4px;
   border: 1px solid var(--code-border);
+  font-family: monospace, monospace;
+  font-size: calc(1em * 0.875);
 }
 
 pre code {
@@ -236,8 +256,27 @@ pre code {
   padding-left: 0px;
   padding-right: 0px;
   margin: 0px;
-  font-size: 0.82em !important;
+  /* font-size: .875em; */
+  font-size: 0.82em;
   tab-size: 4;
+}
+
+@media screen and (max-width: 760px) {
+  pre code {
+    font-size: 80%;
+  }
+}
+
+.fs90 {
+  font-size: 90%;
+}
+
+.fs85 {
+  font-size: 85%;
+}
+
+.fs80 {
+  font-size: 80%;
 }
 
 /* misc elements */

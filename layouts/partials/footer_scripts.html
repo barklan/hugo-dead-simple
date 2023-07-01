@@ -1,4 +1,4 @@
-<!-- Add _blank to all external links -->
+<!-- Shortcuts. -->
 <script defer>
   document.addEventListener("keydown", function (e) {
     if (document.activeElement.isContentEditable) {
@@ -20,7 +20,6 @@
         e.stopPropagation();
         window.location.href = "/tags";
       } else if (key === "i") {
-          // Not working - select fuse input
         e.preventDefault();
         e.stopPropagation();
           const inputs = document.querySelectorAll('input');
@@ -36,6 +35,7 @@
   });
 </script>
 
+<!-- Add _blank to all external links. -->
 <script defer>
   var links = document.getElementsByTagName("a");
 
@@ -46,6 +46,7 @@
   }
 </script>
 
+<!-- Dynamic toc. -->
 <script defer>
   (function () {
     function getScript(url, success) {

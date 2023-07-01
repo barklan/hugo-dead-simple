@@ -1,7 +1,0 @@
-{{ if .Params.Next }}
-    <br>
-    <hr>
-    {{ with .PrevInSection }}
-      Next: <a href="{{ .Permalink }}">{{ .Title }}</a>
-    {{ end }}
-{{ end }}
