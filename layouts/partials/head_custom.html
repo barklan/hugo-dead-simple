@@ -12,9 +12,10 @@
 <link rel="icon" type="image/png" sizes="96x96" href="{{ relURL "favicon-96x96.png" }}">
 <link rel="icon" type="image/png" sizes="16x16" href="{{ relURL "favicon-16x16.png" }}">
 <link rel="manifest" href="{{ relURL "manifest.json" }}">
-<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileColor" content="pink">
 <meta name="msapplication-TileImage" content="{{ relURL "ms-icon-144x144.png" }}">
-<meta name="theme-color" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff" />
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1b1b1b" />
 
 {{ with .OutputFormats.Get "rss" -}}
     {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
