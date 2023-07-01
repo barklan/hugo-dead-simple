@@ -2,16 +2,16 @@
 
 <div class="home-content">{{ .Content }}</div>
 
+{{ if .IsHome }}
+    <!--TODO: replace with faster search-->
+    {{ partial "search-form.html" . }}
+    <ul id="results"></ul>
 
-<!--TODO: replace with faster search-->
-<!-- {{ partial "search-form.html" . }} -->
-<!---->
-<!-- <ul id="results"></ul> -->
-
-{{ if .IsHome }} {{ range .Sections }}
-{{ partial "post_list.html" . }}
-{{ end }} {{ else }}
-{{ partial "post_list.html" . }}
+    {{ range .Sections }}
+    {{ partial "post_list.html" . }}
+    {{ end }}
+{{ else }}
+    {{ partial "post_list.html" . }}
 {{ end }}
 
 {{ partial "footer.html" . }}
