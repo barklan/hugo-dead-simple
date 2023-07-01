@@ -151,7 +151,6 @@ figure {
 
 @media screen and (min-width: 1150px) {
   .menu {
-    left: 20px;
     padding: 0px 4px 0px 14px;
     z-index: 9999;
     border-left: 10px solid var(--complimentary);
@@ -293,6 +292,7 @@ tr {
   #tableOfContentContainer {
     position: fixed;
     left: 20px;
+    top: 70px;
     max-width: 15vw;
     width: 15vw;
   }

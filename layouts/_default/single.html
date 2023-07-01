@@ -10,6 +10,12 @@
   </div>
 </div>
 
+{{ if .Params.toc }}
+<aside class="hidden lg:block toc " id="tableOfContentContainer">
+  {{ .TableOfContents }}
+</aside>
+{{ end }}
+
 {{ if .Params.summary }}
 <p>{{ .Params.summary }}</p>
 {{ end }}
