@@ -42,15 +42,19 @@
     {{ $CSS := slice
         (resources.Get "css/main.css") 
         (resources.Get "css/menu.css") 
-        (resources.Get "css/images.css") 
-        (resources.Get "css/code.css") 
-        (resources.Get "css/tables.css") 
         (resources.Get "css/toc.css") 
         (resources.Get "css/post_meta.css") 
         (resources.Get "css/search.css") 
         (resources.Get "css/rose.css") 
     | resources.Concat "style.css" | minify | fingerprint }}
-    <link rel="stylesheet" type="text/css" href="{{ $CSS.RelPermalink }}" media="print" onload="this.media='all'">
+    <link rel="stylesheet" type="text/css" href="{{ $CSS.RelPermalink }}" media="all">
+
+    {{ $CSSAsync := slice
+        (resources.Get "css/images.css") 
+        (resources.Get "css/code.css") 
+        (resources.Get "css/tables.css") 
+    | resources.Concat "asyncstyle.css" | minify | fingerprint }}
+    <link rel="stylesheet" type="text/css" href="{{ $CSSAsync.RelPermalink }}" media="print" onload="this.media='all'">
   </head>
 
   <body>
