@@ -50,6 +50,10 @@ pre code {
   }
 }
 
+.fs95 {
+  font-size: 90%;
+}
+
 .fs90 {
   font-size: 90%;
 }
@@ -60,6 +64,14 @@ pre code {
 
 .fs80 {
   font-size: 80%;
+}
+
+.fs75 {
+  font-size: 75%;
+}
+
+.fs70 {
+  font-size: 75%;
 }
 
 /* Line numbers in code blocks. */
