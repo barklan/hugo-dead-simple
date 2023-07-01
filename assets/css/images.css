@@ -1,6 +1,17 @@
+@keyframes images {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 img {
   max-height: 70vh;
   margin: 0.8em 0;
+  animation-duration: 1s;
+  animation-name: images;
 }
 
 .imgp {

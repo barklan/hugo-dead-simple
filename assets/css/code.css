@@ -79,4 +79,32 @@ pre code {
   outline-width: 2px;
 }
 
+/* Copy code button */
+.copy-code-button {
+  display: none;
+}
 
+@keyframes copy-code-button {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media screen and (min-width: 760px) {
+  .copy-code-button {
+    animation-duration: 1s;
+    animation-name: copy-code-button;
+    margin-top: -21px;
+    float: right;
+    display: block;
+    background-color: var(--code-background);
+    border-color: var(--code-border);
+    border-style: solid;
+    border-width: 1px 1px 0 1px;
+    border-radius: 2px 2px 0 0;
+    color: var(--text-dim);
+  }
+}
