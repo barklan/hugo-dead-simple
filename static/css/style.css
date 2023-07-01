@@ -91,12 +91,12 @@ h2 {
   margin-top: 1.4em;
   border-bottom: 1px solid var(--border-general);
   font-weight: normal;
-  font-size: 1.5em;
+  font-size: 1.7em;
   font-family: "Linux Libertine", "Georgia", "Times", serif;
 }
 
 h3 {
-  font-size: 1.2em;
+  font-size: 1.3em;
   margin-bottom: 0.7em;
   padding-bottom: 0;
 }
@@ -105,6 +105,8 @@ h4 {
   font-size: 1.1em;
   margin-bottom: 0;
   padding-bottom: 0;
+  font-style: oblique;
+  font-weight: normal
 }
 
 a {
@@ -503,6 +505,10 @@ details {
   #search-input {
     width: 33%;
   }
+}
+
+mark {
+  padding: 0 2px 0 2px;
 }
 
 /* Main page search */
