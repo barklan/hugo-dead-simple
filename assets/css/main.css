@@ -32,6 +32,20 @@
   }
 }
 
+#gitinfo-date {
+  color: var(--text-dim);
+  filter: brightness(40%);
+  font-style: italic;
+  font-size: 0.9em;
+  white-space: nowrap;
+}
+
+@media screen and (min-width: 760px) {
+  #gitinfo-date {
+    margin-left: 30px;
+  }
+}
+
 /* TODO: add iframe margins */
 
 /* HTML & BODY */

@@ -70,6 +70,7 @@
             {{ range .Site.Menus.main }}
                 <li><a tabindex="-1" class="menu-link" href="{{ .URL | relURL }}">{{ safeHTML .Name }}</a></li>
             {{ end }}
+            <span id="gitinfo-date">{{ .Site.LastChange.Format "02 Jan 2006 15:04 -0700" }}</span>
           </ul>
         </nav>
         {{ end }}
