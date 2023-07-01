@@ -53,11 +53,11 @@
         (resources.Get "css/post_meta.css") 
         (resources.Get "css/search.css") 
         (resources.Get "css/rose.css") 
+        (resources.Get "css/code.css") 
     | resources.Concat "style.css" | minify | fingerprint }}
     <link rel="stylesheet" type="text/css" href="{{ $CSS.RelPermalink }}" media="all">
 
     {{ $CSSAsync := slice
-        (resources.Get "css/code.css") 
         (resources.Get "css/tables.css") 
     | resources.Concat "asyncstyle.css" | minify | fingerprint }}
     <link rel="stylesheet" type="text/css" href="{{ $CSSAsync.RelPermalink }}" media="print" onload="this.media='all'">
