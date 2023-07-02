@@ -74,6 +74,10 @@ pre code {
   font-size: 75%;
 }
 
+.fs50 {
+  font-size: 50%;
+}
+
 /* Line numbers in code blocks. */
 .ln {
   user-select: none;
