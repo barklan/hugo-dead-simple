@@ -54,6 +54,7 @@
         (resources.Get "css/search.css") 
         (resources.Get "css/rose.css") 
         (resources.Get "css/code.css") 
+        (resources.Get "css/fonts.css") 
     | resources.Concat "style.css" | minify | fingerprint }}
     <link rel="stylesheet" type="text/css" href="{{ $CSS.RelPermalink }}" media="all">
 
