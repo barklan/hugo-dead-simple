@@ -165,6 +165,16 @@ ul {
   padding-left: 2rem;
 }
 
+/* NOTE: fix for Inter font. */
+strong {
+    font-weight: 600;
+}
+
+/* NOTE: fix for Inter font. */
+th {
+    font-weight: 500;
+}
+
 /* MISC */
 .post-list {
   color: var(--complimentary);
