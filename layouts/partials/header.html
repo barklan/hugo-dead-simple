@@ -27,10 +27,10 @@
     <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
     <meta http-equiv="pragma" content="no-cache" />
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ relURL "apple-touch-icon.png" }}"}>
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ relURL "favicon-32x32.png" }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ relURL "favicon-16x16.png" }}">
+    <link rel="manifest" href="{{ relURL "site.webmanifest" }}">
 
     <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff" />
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1b1b1b" />
@@ -45,14 +45,14 @@
         <title>{{ .Title }} | {{ .Site.Title }}</title>
     {{ end }}
     
-    <link href="fonts/Inter-Regular.woff2?v=4.0" rel="preload" type="font/woff2" as="font" crossorigin="">
-    <link href="fonts/Inter-Italic.woff2?v=4.0" rel="preload" type="font/woff2" as="font" crossorigin="">
-    <link href="fonts/Inter-Medium.woff2?v=4.0" rel="preload" type="font/woff2" as="font" crossorigin="">
-    <link href="fonts/Inter-MediumItalic.woff2?v=4.0" rel="preload" type="font/woff2" as="font" crossorigin="">
-    <link href="fonts/Inter-SemiBold.woff2?v=4.0" rel="preload" type="font/woff2" as="font" crossorigin="">
-    <link href="fonts/Inter-SemiBoldItalic.woff2?v=4.0" rel="preload" type="font/woff2" as="font" crossorigin="">
-    <link href="fonts/Inter-Bold.woff2?v=4.0" rel="preload" type="font/woff2" as="font" crossorigin="">
-    <link href="fonts/Inter-BoldItalic.woff2?v=4.0" rel="preload" type="font/woff2" as="font" crossorigin="">
+    <link href="{{ relURL "fonts/Inter-Regular.woff2?v=4.0" }}" rel="preload" type="font/woff2" as="font" crossorigin="">
+    <link href="{{ relURL "fonts/Inter-Italic.woff2?v=4.0" }}" rel="preload" type="font/woff2" as="font" crossorigin="">
+    <link href="{{ relURL "fonts/Inter-Medium.woff2?v=4.0" }}" rel="preload" type="font/woff2" as="font" crossorigin="">
+    <link href="{{ relURL "fonts/Inter-MediumItalic.woff2?v=4.0" }}" rel="preload" type="font/woff2" as="font" crossorigin="">
+    <link href="{{ relURL "fonts/Inter-SemiBold.woff2?v=4.0" }}" rel="preload" type="font/woff2" as="font" crossorigin="">
+    <link href="{{ relURL "fonts/Inter-SemiBoldItalic.woff2?v=4.0" }}" rel="preload" type="font/woff2" as="font" crossorigin="">
+    <link href="{{ relURL "fonts/Inter-Bold.woff2?v=4.0" }}" rel="preload" type="font/woff2" as="font" crossorigin="">
+    <link href="{{ relURL "fonts/Inter-BoldItalic.woff2?v=4.0" }}" rel="preload" type="font/woff2" as="font" crossorigin="">
 
     {{ $CSS := slice
         (resources.Get "css/main.css") 
