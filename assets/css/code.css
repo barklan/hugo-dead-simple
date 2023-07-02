@@ -9,11 +9,6 @@ pre {
   border-radius: 3px 0 3px 3px;
 }
 
-/* TODO: Remove this */
-.output pre {
-  color: #9a3412;
-}
-
 .highlight {
   margin: 0.8em 0;
 }
