@@ -78,6 +78,19 @@ pre code {
   font-size: 50%;
 }
 
+.dense {
+  line-height: 1.1;
+}
+
+.denser {
+  line-height: 1;
+}
+
+.clown {
+  line-height: 0.1;
+  font-weight: 200;
+}
+
 /* Line numbers in code blocks. */
 .ln {
   user-select: none;
