@@ -58,7 +58,7 @@ html {
 body {
   display: block;
   margin: auto;
-  padding: 1em 1em 2em 1em;
+  padding: 0em 1em 2em 1em;
   /* font-family: "Open Sans", sans-serif; */
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI",
     Helvetica, Arial, sans-serif;
