@@ -21,7 +21,7 @@
 
 @media (prefers-color-scheme: dark) {
   .rose-icon {
-    filter: invert(30%);
+    filter: invert(20%);
   }
 }
 

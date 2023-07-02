@@ -139,17 +139,15 @@ hr {
 }
 
 blockquote {
-  overflow: hidden;
-  margin: 1em 0;
-  padding: 0 40px;
+  border-left: 0.3rem solid var(--complimentary);
+  font-style: oblique;
+  margin: 1.6rem 0;
+  padding: 0 1.4rem 0 1rem;
   line-height: 1.6;
-  margin-left: 1em;
-  margin-right: 1em;
 }
 
 blockquote p {
-  margin-top: 0.3em;
-  margin-bottom: 0.3em;
+  margin: 0;
 }
 
 details {
@@ -167,12 +165,12 @@ ul {
 
 /* NOTE: fix for Inter font. */
 strong {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 /* NOTE: fix for Inter font. */
 th {
-    font-weight: 500;
+  font-weight: 500;
 }
 
 /* MISC */
