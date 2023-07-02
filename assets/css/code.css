@@ -25,22 +25,30 @@ pre {
 }
 
 code {
+  font-family: "Iosevka Web", monospace;
+
+  /* For Iosevka */
+  font-stretch: expanded;
+
   background: var(--code-background);
   border-radius: 5%;
   padding: 1px 4px;
   border: 1px solid var(--code-border);
-  font-family: monospace, monospace;
   font-size: calc(1em * 0.875);
 }
 
 pre code {
+  /* font-size: 0.875em; */
+
+  /* For Iosevka */
+  font-size: 0.92em;
+  font-stretch: normal;
+
   border: none;
   background: none;
   padding-left: 0px;
   padding-right: 0px;
   margin: 0px;
-  /* font-size: .875em; */
-  font-size: 0.82em;
   tab-size: 4;
 }
 
@@ -79,10 +87,14 @@ pre code {
 }
 
 .dense {
-  line-height: 1.1;
+  line-height: 1.3;
 }
 
 .denser {
+  line-height: 1.2;
+}
+
+.denserr {
   line-height: 1;
 }
 
