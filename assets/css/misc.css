@@ -1,0 +1,73 @@
+/* ATTACHMENTS */
+.attachments-files {
+  display: block;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.attachment-size {
+  display: inline-block;
+  color: var(--text-dim);
+}
+
+.attachments ul {
+  margin-top: 4px;
+}
+
+.attachments label {
+  font-weight: 300;
+  margin: 0;
+}
+
+/* COLUMNS */
+.md-columns {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -1rem;
+  margin-right: -1rem;
+}
+
+.md-columns > div {
+  flex: 1 1;
+  margin: 1rem 0;
+  min-width: 100px;
+  max-width: 100%;
+  padding: 0 1rem;
+}
+
+.md-columns .markdown-inner {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* TABS */
+.md-tabs {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--border-general);
+  border-radius: 3px;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+}
+.md-tabs label {
+  display: inline-block;
+  padding: 0.6rem 0.2rem 0.3rem 0.2rem;
+  border-bottom: 1px transparent;
+  cursor: pointer;
+}
+.md-tabs .md-tabs-content {
+  order: 999;
+  width: 100%;
+  border-top: 1px solid white;
+  padding: 0.5rem 1rem 1rem 1rem;
+  display: none;
+}
+
+.md-tabs input[type="radio"] {
+    margin-left: 1.1rem;
+}
+
+.md-tabs input[type="radio"]:checked + label + .md-tabs-content {
+  display: block;
+}

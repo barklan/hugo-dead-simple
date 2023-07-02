@@ -1,0 +1,18 @@
+{{ if .Parent }}
+  {{ $name := .Get 0 }}
+
+  {{- if not (.Parent.Scratch.Get "tabs-id") -}}
+  {{ $id :=  index (seq 1000 | shuffle) 0 }}
+  {{ .Parent.Scratch.Add "tabs-id" $id }}
+  {{- end -}}
+
+  {{ $group := printf "tabs-%d" (.Parent.Scratch.Get "tabs-id") }}
+
+  {{ if not (.Parent.Scratch.Get $group) }}
+    {{ .Parent.Scratch.Set $group slice }}
+  {{ end }}
+    
+  {{ .Parent.Scratch.Add $group (dict "Name" $name "Content" .Inner) }}
+{{ else }}
+  {{ errorf "%q: 'tab' shortcode must be inside 'tabs' shortcode" .Page.Path }}
+{{ end}}

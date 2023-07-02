@@ -1,0 +1,18 @@
+{{ if .Inner }}{{ end }}
+
+{{ $id := .Scratch.Get "tabs-id" }}
+{{ $group := printf "tabs-%d" $id }}
+
+<div class="md-tabs">
+{{- range $index, $tab :=  .Scratch.Get $group -}}
+  {{ $individualTabId := printf "%s-%d" $group $index }}
+  <input type="radio" class="hidden" name="{{ $group }}" id="{{ $individualTabId }}" {{ if not $index }}checked="checked"{{ end }} />
+  <label for="{{ $individualTabId }}">
+    {{- $tab.Name -}}
+  </label>
+  <div class="md-tabs-content markdown-inner">
+    {{- .Content | markdownify | safeHTML -}}
+  </div>
+{{- end -}}
+</div>
+{{ .Scratch.Delete "tabs-id" }}

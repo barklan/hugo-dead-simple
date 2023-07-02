@@ -64,6 +64,7 @@
 
     {{ $CSSAsync := slice
         (resources.Get "css/tables.css") 
+        (resources.Get "css/misc.css") 
     | resources.Concat "asyncstyle.css" | minify | fingerprint }}
     <link rel="stylesheet" type="text/css" href="{{ $CSSAsync.RelPermalink }}" media="print" onload="this.media='all'">
   </head>

@@ -1,0 +1,24 @@
+<section class="attachments">
+	<label>{{- (.Get "title") | default "Attachments" -}}{{ with (.Get "caption") }}  ({{- . -}}){{ end }}</label>
+	<div class="attachments-files">
+		{{- $folderName := default "files" (.Get "folder") -}}
+		{{- $hasPattern := false -}}
+		{{- if .Get "pattern" -}}{{- $hasPattern = true -}}{{- end -}}
+		{{- $folder := path.Join "content" (path.Join .Page.File.Dir $folderName) -}}
+		<ul>
+			{{- range readDir $folder -}}
+			{{- $include := not $hasPattern -}}
+			{{- if $hasPattern -}}{{- $include = findRE ($.Get "pattern") .Name -}}{{- end -}}
+			{{- if $include -}}
+			<li>
+				<a class="tooltipped tooltipped-n" aria-label="Download" href="{{ ($.Page.Resources.GetMatch (path.Join $folderName .Name)).RelPermalink }}" download>{{- .Name | markdownify -}}</a>
+				<a class="new-tab tooltipped tooltipped-n" aria-label="Open in new tab" href="{{ ($.Page.Resources.GetMatch (path.Join $folderName .Name)).RelPermalink }}" target="_blank">🔗</a>
+                &nbsp;
+				<div class="attachment-size">({{- if le .Size 1024 -}}{{- .Size -}} b{{- else -}}{{- div .Size 1024 -}}kb{{- end -}})</div>
+			</li>
+			{{- end -}}
+			{{- end -}}
+		</ul>
+	</div>
+</section>
+

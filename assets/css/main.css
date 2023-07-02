@@ -34,7 +34,7 @@
 
 #gitinfo-date {
   color: var(--text-dim);
-  filter: brightness(40%);
+  filter: opacity(40%);
   font-style: italic;
   font-size: 0.9em;
   white-space: nowrap;
@@ -60,7 +60,8 @@ body {
   margin: auto;
   padding: 1em 1em 2em 1em;
   /* font-family: "Open Sans", sans-serif; */
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI",  Helvetica, Arial, sans-serif;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI",
+    Helvetica, Arial, sans-serif;
   line-height: 1.5;
 }
 
@@ -160,6 +161,10 @@ mark {
   padding: 0 2px 0 2px;
 }
 
+ul {
+  padding-left: 2rem;
+}
+
 /* MISC */
 .post-list {
   color: var(--complimentary);
@@ -173,7 +178,7 @@ mark {
 }
 
 .bold-post-in-list {
-  font-weight: 600;;
+  font-weight: 600;
 }
 
 @media screen and (max-width: 760px) {
