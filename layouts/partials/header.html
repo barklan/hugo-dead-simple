@@ -44,6 +44,15 @@
     {{ else }}
         <title>{{ .Title }} | {{ .Site.Title }}</title>
     {{ end }}
+    
+    <link href="fonts/Inter-Regular.woff2?v=4.0" rel="preload" type="font/woff2" as="font" crossorigin="">
+    <link href="fonts/Inter-Italic.woff2?v=4.0" rel="preload" type="font/woff2" as="font" crossorigin="">
+    <link href="fonts/Inter-Medium.woff2?v=4.0" rel="preload" type="font/woff2" as="font" crossorigin="">
+    <link href="fonts/Inter-MediumItalic.woff2?v=4.0" rel="preload" type="font/woff2" as="font" crossorigin="">
+    <link href="fonts/Inter-SemiBold.woff2?v=4.0" rel="preload" type="font/woff2" as="font" crossorigin="">
+    <link href="fonts/Inter-SemiBoldItalic.woff2?v=4.0" rel="preload" type="font/woff2" as="font" crossorigin="">
+    <link href="fonts/Inter-Bold.woff2?v=4.0" rel="preload" type="font/woff2" as="font" crossorigin="">
+    <link href="fonts/Inter-BoldItalic.woff2?v=4.0" rel="preload" type="font/woff2" as="font" crossorigin="">
 
     {{ $CSS := slice
         (resources.Get "css/main.css") 
