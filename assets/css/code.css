@@ -76,9 +76,6 @@ pre code {
 
 /* Line numbers in code blocks. */
 .ln {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
   margin-right: 14px;
   color: rgb(150, 150, 150);
