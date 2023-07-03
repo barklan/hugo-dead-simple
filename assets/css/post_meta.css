@@ -1,8 +1,7 @@
 /* POST META */
 #single-header {
-  border: 2px solid var(--complimentary);
-  border-radius: 2px;
-  padding: 8px 8px 4px 12px;
+  border-bottom: 2px solid var(--complimentary);
+  padding: 0px 8px 4px 0;
   margin-bottom: 20px;
   margin-top: 20px;
 }

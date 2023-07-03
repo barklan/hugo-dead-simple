@@ -1,13 +1,17 @@
 /* TOC */
+.toc a {
+    color: var(--text-dim)
+}
+
 .toc a:visited {
-  color: var(--link);
+  color: var(--text-dim);
 }
 
 @media screen and (min-width: 1150px) {
   #tableOfContentContainer {
     position: fixed;
     left: 20px;
-    top: 64px;
+    top: 58px;
     max-width: 15vw;
     width: 15vw;
   }
