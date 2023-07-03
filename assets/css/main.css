@@ -4,8 +4,9 @@
   --text-dim: #444;
   --link: #3366cc;
   --link-visited: #795cb2;
-  --code-background: #f8f9fa;
+  --code-background: #f3f5f7;
   --code-border: #eaecf0;
+  --code-border: transparent;
   --code-hl: #e6e6e6;
   --border-general: #cccfd4;
   --table-th: #e1e5ea;
@@ -92,7 +93,7 @@ h1 {
   font-family: "Linux Libertine", "Georgia", "Times", serif;
   font-weight: normal;
   margin-bottom: 0px;
-  font-size: 2.0em;
+  font-size: 2em;
   margin-top: 0;
 }
 
