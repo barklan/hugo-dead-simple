@@ -59,7 +59,7 @@
 .md-tabs .md-tabs-content {
   order: 999;
   width: 100%;
-  border-top: 1px solid white;
+  border-top: 1px solid var(--border-general);
   padding: 0.5rem 1rem 1rem 1rem;
   display: none;
 }
