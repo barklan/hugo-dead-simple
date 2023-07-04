@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}">
   <head>
+    <!-- Prevent flicker on page load. -->
     <style>
         :root {
           --background: #ffffff;
@@ -79,11 +80,11 @@
                 <li><a tabindex="-1" class="menu-link" href="{{ .URL | relURL }}">{{ safeHTML .Name }}</a></li>
             {{ end }}
 
-            {{ if .IsHome }}
-                {{ with (getenv "LAST_COMMIT_DATE") }}
-                    <span id="gitinfo-date">v. {{ time . | dateFormat "02 Jan 2006 15:04 -0700" }}</span>
-                {{ end }}
-            {{ end }}
+            <!-- {{ if .IsHome }} -->
+            <!--     {{ with (getenv "LAST_COMMIT_DATE") }} -->
+            <!--         <span id="gitinfo-date">v. {{ time . | dateFormat "02 Jan 2006 15:04 -0700" }}</span> -->
+            <!--     {{ end }} -->
+            <!-- {{ end }} -->
           </ul>
         </nav>
         {{ end }}
