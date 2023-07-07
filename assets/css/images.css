@@ -56,7 +56,7 @@ video {
 }
 
 .image-gallery > li {
-  flex-basis: 440px; /*width: 350px;*/
+  flex-basis: 440px;
 }
 
 .image-gallery li img {
@@ -78,5 +78,5 @@ video {
 }
 
 .three-image-gallery > li {
-  flex-basis: 290px; /*width: 350px;*/
+  flex-basis: 290px;
 }
