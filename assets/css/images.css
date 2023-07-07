@@ -76,3 +76,7 @@ video {
   text-align: center;
   color: var(--text-dim);
 }
+
+.three-image-gallery > li {
+  flex-basis: 290px; /*width: 350px;*/
+}
