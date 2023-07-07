@@ -40,17 +40,35 @@ video {
   max-width: 100%;
 }
 
-/* Two images side by side shortcode */
-.side-by-side-parent {
-  display: block;
+/* Image gallery. */
+.image-gallery {
+  margin: 1.2rem 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding-left: 0;
 }
 
-@media screen and (min-width: 760px) {
-  .side-by-side-parent {
-    display: flex;
-  }
+.image-gallery > li {
+  flex-basis: 440px; /*width: 350px;*/
 }
 
-.side-by-side-child {
-  padding: 2px;
+.image-gallery li img {
+  object-fit: cover;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  border-radius: 4px;
+}
+
+.image-gallery-title {
+  text-align: center;
+  color: var(--text-dim);
+}
+
+.igt {
+  text-align: center;
+  color: var(--text-dim);
 }
