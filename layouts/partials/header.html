@@ -59,14 +59,10 @@
         (resources.Get "css/rose.css") 
         (resources.Get "css/code.css") 
         (resources.Get "css/fonts.css") 
-    | resources.Concat "style.css" | minify | fingerprint }}
-    <link rel="stylesheet" type="text/css" href="{{ $CSS.RelPermalink }}" media="all">
-
-    {{ $CSSAsync := slice
         (resources.Get "css/tables.css") 
         (resources.Get "css/misc.css") 
-    | resources.Concat "asyncstyle.css" | minify | fingerprint }}
-    <link rel="stylesheet" type="text/css" href="{{ $CSSAsync.RelPermalink }}" media="print" onload="this.media='all'">
+    | resources.Concat "style.css" | minify | fingerprint }}
+    <link rel="stylesheet" type="text/css" href="{{ $CSS.RelPermalink }}" media="all">
   </head>
 
   <body>
