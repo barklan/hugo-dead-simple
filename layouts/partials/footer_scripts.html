@@ -2,34 +2,35 @@
 <script defer>
   document.addEventListener("keydown", function (e) {
     if (document.activeElement.isContentEditable) {
-        return false;
+      return false;
     }
     if (document.activeElement.tagName == "INPUT") {
       return false;
     }
     if (e.altKey || e.ctrlKey || e.shiftKey) {
-        return false;
+      return false;
     }
-     var key = e.key
-      if (key === "h") {
-        e.preventDefault();
-        e.stopPropagation();
-        window.location.href = "/";
-      } else if (key === "t") {
-        e.preventDefault();
-        e.stopPropagation();
-        window.location.href = "/tags";
-      } else if (key === "i") {
-        e.preventDefault();
-        e.stopPropagation();
-          const inputs = document.querySelectorAll('input');
-          for (let i = 0; i < inputs.length; i++) {
-            if (inputs[i].offsetParent !== null) {
-              inputs[i].selectionStart = inputs[i].selectionEnd = inputs[i].value.length;
-              inputs[i].focus();
-              break;
-            }
-          }
+    var key = e.key;
+    if (key === "h") {
+      e.preventDefault();
+      e.stopPropagation();
+      window.location.href = "/";
+    } else if (key === "t") {
+      e.preventDefault();
+      e.stopPropagation();
+      window.location.href = "/tags";
+    } else if (key === "i") {
+      e.preventDefault();
+      e.stopPropagation();
+      const inputs = document.querySelectorAll("input");
+      for (let i = 0; i < inputs.length; i++) {
+        if (inputs[i].offsetParent !== null) {
+          inputs[i].selectionStart = inputs[i].selectionEnd =
+            inputs[i].value.length;
+          inputs[i].focus();
+          break;
+        }
+      }
     }
     return false;
   });
@@ -37,93 +38,74 @@
 
 <!-- Dynamic toc. -->
 <script defer>
-  (function () {
-    function getScript(url, success) {
-      var script = document.createElement("script");
-      script.src = url;
-      var head = document.getElementsByTagName("head")[0],
-        done = false;
-      script.onload = script.onreadystatechange = function () {
-        if (
-          !done &&
-          (!this.readyState ||
-            this.readyState == "loaded" ||
-            this.readyState == "complete")
-        ) {
-          done = true;
-          success();
-          script.onload = script.onreadystatechange = null;
-          head.removeChild(script);
+  function scrollHandler() {
+    const anchors = Array.from(document.querySelectorAll("body h2, body h3"));
+
+    window.addEventListener("scroll", function () {
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+      // Highlight the last scrolled-to: set everything inactive first
+      for (var i = 0; i < anchors.length; i++) {
+        var anchorId = anchors[i].getAttribute("id");
+        var link = document.querySelector(
+          'nav ul li a[href="#' + anchorId + '"]'
+        );
+        if (link) {
+          link.classList.remove("active-toc");
         }
-      };
-      head.appendChild(script);
-    }
-    getScript(
-      "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.slim.min.js",
-      function () {
-        const anchors = $("body").find("h2,h3");
-
-        $(window).scroll(function () {
-          var scrollTop = $(document).scrollTop();
-
-          // highlight the last scrolled-to: set everything inactive first
-          for (var i = 0; i < anchors.length; i++) {
-            $(
-              'nav ul li a[href="#' + $(anchors[i]).attr("id") + '"]'
-            ).removeClass("active-toc");
-          }
-
-          // then iterate backwards, on the first match highlight it and break
-          for (var i = anchors.length - 1; i >= 0; i--) {
-            if (scrollTop > $(anchors[i]).offset().top - 75) {
-              $(
-                'nav ul li a[href="#' + $(anchors[i]).attr("id") + '"]'
-              ).addClass("active-toc");
-              break;
-            }
-          }
-        });
       }
-    );
-  })();
+
+      // Then iterate backwards, on the first match highlight it and break
+      for (var i = anchors.length - 1; i >= 0; i--) {
+        var offsetTop = anchors[i].offsetTop;
+        if (scrollTop > offsetTop - 75) {
+          var anchorId = anchors[i].getAttribute("id");
+          var link = document.querySelector(
+            'nav ul li a[href="#' + anchorId + '"]'
+          );
+          if (link) {
+            link.classList.add("active-toc");
+            break;
+          }
+        }
+      }
+    });
+  }
+  setTimeout(scrollHandler, 100)
 </script>
 
 <script defer>
-function addCopyButtonToCodeBlocks() {
+  function addCopyButtonToCodeBlocks() {
     // Get all code blocks with a class of "language-*"
     const codeBlocks = document.querySelectorAll('code[class^="language-"]');
 
-    codeBlocks.forEach(codeBlock => {
-        const copyButton = document.createElement('button');
-        copyButton.classList.add('copy-code-button');
-        copyButton.innerHTML = 'copy';
+    codeBlocks.forEach((codeBlock) => {
+      const copyButton = document.createElement("button");
+      copyButton.classList.add("copy-code-button");
+      copyButton.innerHTML = "copy";
 
-        // Add a click event listener to the copy button
-        copyButton.addEventListener('click', () => {
-
-            // Copy the code inside the code block to the clipboard
-            const elements = codeBlock.querySelectorAll('.cl')
-            let codeToCopy = '';
-            elements.forEach(element => {
-                codeToCopy += element.innerText;
-            });
-            navigator.clipboard.writeText(codeToCopy);
-
-            // Update the copy button text to indicate that the code has been copied
-            copyButton.innerHTML = 'copied!';
-            setTimeout(() => {
-                copyButton.innerHTML = 'copy';
-            }, 1500);
+      // Add a click event listener to the copy button
+      copyButton.addEventListener("click", () => {
+        // Copy the code inside the code block to the clipboard
+        const elements = codeBlock.querySelectorAll(".cl");
+        let codeToCopy = "";
+        elements.forEach((element) => {
+          codeToCopy += element.innerText;
         });
+        navigator.clipboard.writeText(codeToCopy);
 
-        // Add the copy button to the code block
-        codeBlock.parentNode.before(copyButton)
+        // Update the copy button text to indicate that the code has been copied
+        copyButton.innerHTML = "copied!";
+        setTimeout(() => {
+          copyButton.innerHTML = "copy";
+        }, 1500);
+      });
+
+      // Add the copy button to the code block
+      codeBlock.parentNode.before(copyButton);
     });
-}
-setTimeout(
-    function() {
-        addCopyButtonToCodeBlocks()
-    }, 100
-)
+  }
+  setTimeout(function () {
+    addCopyButtonToCodeBlocks();
+  }, 100);
 </script>
-
