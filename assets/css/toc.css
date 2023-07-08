@@ -69,8 +69,13 @@
   list-style: outside none none;
 }
 
+.toc ul li a {
+  transition-duration: 50ms;
+}
+
 .active-toc {
   font-weight: bold;
+  transition-duration: 50ms;
 }
 
 /* h2 in toc has 20px padding and h1 should be the title and shouldn't be present in toc */

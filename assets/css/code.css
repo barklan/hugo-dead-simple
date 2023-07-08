@@ -1,4 +1,12 @@
-/* CODE */
+@keyframes code-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .highlight div,
 pre {
   background-color: var(--code-background);
@@ -101,19 +109,10 @@ pre code {
   display: none;
 }
 
-@keyframes copy-code-button {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
 @media screen and (min-width: 760px) {
   .copy-code-button {
     animation-duration: 1s;
-    animation-name: copy-code-button;
+    animation-name: code-fade-in;
     margin-top: -21px;
     float: right;
     display: block;
