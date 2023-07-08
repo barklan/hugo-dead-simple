@@ -1,21 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}">
   <head>
-    <!-- Prevent flicker on page load. -->
-    <style>
-        :root {
-          --background: #ffffff;
-        }
-        @media (prefers-color-scheme: dark) {
-          :root {
-            --background: #1b1b1b;
-          }
-        }
-        html {
-            background-color: var(--background);
-        }
-    </style>
-
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -42,6 +27,25 @@
     {{ else }}
         <title>{{ .Title }} | {{ .Site.Title }}</title>
     {{ end }}
+
+    <!-- Prevent flicker on page load. -->
+    <style>
+        :root {
+          --background: #ffffff;
+        }
+        @media (prefers-color-scheme: dark) {
+          :root {
+            --background: #1b1b1b;
+          }
+        }
+        html {
+            background-color: var(--background);
+        }
+        body {
+            background-color: var(--background);
+        }
+    </style>
+
     
     <link href="{{ relURL "fonts/Inter-Regular.woff2?v=4.0" }}" rel="preload" type="font/woff2" as="font" crossorigin="">
     <link href="{{ relURL "fonts/Inter-Italic.woff2?v=4.0" }}" rel="preload" type="font/woff2" as="font" crossorigin="">
