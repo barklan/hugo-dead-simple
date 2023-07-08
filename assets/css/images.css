@@ -19,13 +19,15 @@ img {
   text-align: center;
 }
 
-.imgp img {
-  border-radius: 4px;
-}
-
 figure {
   margin: auto;
   text-align: center;
+}
+
+.imgp img,
+figure img
+{
+  border-radius: 4px;
 }
 
 figcaption {
