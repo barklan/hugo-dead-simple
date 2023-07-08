@@ -30,6 +30,7 @@ figure {
 
 figcaption {
   color: var(--text-dim);
+  font-size: 0.96rem;
   text-align: center;
 }
 
@@ -46,8 +47,7 @@ video {
 
 /* Image gallery. */
 .image-gallery {
-  padding: 0 0 1rem 0;
-  magin: 0;
+  margin: 0 0 1.2rem 0;
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
@@ -67,16 +67,6 @@ video {
 
   vertical-align: middle;
   border-radius: 4px;
-}
-
-.image-gallery-title {
-  text-align: center;
-  color: var(--text-dim);
-}
-
-.igt {
-  text-align: center;
-  color: var(--text-dim);
 }
 
 .three-image-gallery > li {

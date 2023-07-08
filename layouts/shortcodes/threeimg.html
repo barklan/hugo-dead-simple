@@ -1,11 +1,19 @@
-<ul class="image-gallery three-image-gallery">
-  <li>
-    <img loading="lazy" src="{{ index .Params 0 }}" alt="" />
-  </li>
-  <li>
-    <img loading="lazy" src="{{ index .Params 1 }}" alt="" />
-  </li>
-  <li>
-    <img loading="lazy" src="{{ index .Params 2 }}" alt="" />
-  </li>
-</ul>
+<div class="image-gallery-container">
+  <ul class="image-gallery three-image-gallery">
+    <li>
+      <figure>
+        <img loading="lazy" src="{{ index .Params 0 }}" />
+      </figure>
+    </li>
+    <li>
+      <figure>
+        <img loading="lazy" src="{{ index .Params 1 }}" />
+      </figure>
+    </li>
+    <li>
+      <figure>
+        <img loading="lazy" src="{{ index .Params 2 }}" />
+      </figure>
+    </li>
+  </ul>
+</div>
