@@ -1,14 +1,10 @@
 <div class="image-gallery-container">
-  <ul class="image-gallery">
+  <ul class="image-gallery-img">
     <li>
-      <figure>
-        <img loading="lazy" src="{{ index .Params 0 }}" />
-      </figure>
+        <a target="_blank" href="{{ index .Params 0 }}"><img loading="lazy" src="{{ index .Params 0 }}" /></a>
     </li>
     <li>
-      <figure>
-        <img loading="lazy" src="{{ index .Params 1 }}" />
-      </figure>
+        <a target="_blank" href="{{ index .Params 1 }}"><img loading="lazy" src="{{ index .Params 1 }}" /></a>
     </li>
   </ul>
 </div>
