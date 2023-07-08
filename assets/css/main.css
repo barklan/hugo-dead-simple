@@ -52,12 +52,12 @@
 /* HTML & BODY */
 html {
   color: var(--text);
-  background-color: var(--background);
+  /* set in header*/
+  /* background-color: var(--background); */
   scroll-behavior: smooth;
 }
 
 body {
-  display: block;
   margin: auto;
   padding: 0em 1em 2em 1em;
   /* font-family: "Open Sans", sans-serif; */
