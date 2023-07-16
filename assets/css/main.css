@@ -175,6 +175,10 @@ th {
 }
 
 /* MISC */
+.section-title {
+    border: 0;
+}
+
 .post-list {
   color: var(--complimentary);
   padding-left: 1em;

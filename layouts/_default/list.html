@@ -8,9 +8,12 @@
     <ul id="results"></ul>
 
     {{ range .Sections }}
-    {{ partial "post_list.html" . }}
+        <h2 class="section-title">{{ .CurrentSection.Title }}</h2>
+        {{ .CurrentSection.Content }}
+        {{ partial "post_list.html" . }}
     {{ end }}
 {{ else }}
+    <h2 class="section-title">{{ .CurrentSection.Title }}</h2>
     {{ partial "post_list.html" . }}
 {{ end }}
 
