@@ -20,8 +20,6 @@ input {
   color: var(--text);
   border-color: var(--border-general);
   padding: 6px;
-  margin-top: 12px;
-  margin-bottom: 6px;
   border-radius: 4px;
 }
 
