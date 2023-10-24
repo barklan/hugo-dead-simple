@@ -71,8 +71,3 @@
 .md-tabs input[type="radio"]:checked + label + .md-tabs-content {
   display: block;
 }
-
-/* CHECKBOXES */
-[type=checkbox] {
-    margin-top: 6px;
-}

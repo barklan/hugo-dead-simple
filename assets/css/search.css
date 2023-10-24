@@ -19,7 +19,7 @@ input {
   background-color: var(--background);
   color: var(--text);
   border-color: var(--border-general);
-  padding: 6px;
+  /* padding: 6px; */
   border-radius: 4px;
 }
 
