@@ -1,5 +1,6 @@
 /* SEARCH */
 #search-input {
+  padding: 6px;
   width: 72%;
 }
 
@@ -19,11 +20,9 @@ input {
   background-color: var(--background);
   color: var(--text);
   border-color: var(--border-general);
-  /* padding: 6px; */
   border-radius: 4px;
 }
 
 #results {
   padding-left: 16px;
 }
-
