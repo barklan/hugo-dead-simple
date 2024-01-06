@@ -113,7 +113,7 @@ pre code {
   .copy-code-button {
     animation-duration: 1s;
     animation-name: code-fade-in;
-    margin-top: -21px;
+    margin-top: -22px;
     float: right;
     display: block;
     background-color: var(--code-background);
