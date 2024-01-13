@@ -18,7 +18,7 @@
     } else if (key === "t") {
       e.preventDefault();
       e.stopPropagation();
-      window.location.href = "/tags";
+      window.location.href = `https://${location.hostname}/tags`;
     } else if (key === "i") {
       e.preventDefault();
       e.stopPropagation();
@@ -48,7 +48,7 @@
       for (var i = 0; i < anchors.length; i++) {
         var anchorId = anchors[i].getAttribute("id");
         var link = document.querySelector(
-          'nav ul li a[href="#' + anchorId + '"]'
+          'nav ul li a[href="#' + anchorId + '"]',
         );
         if (link) {
           link.classList.remove("active-toc");
@@ -61,7 +61,7 @@
         if (scrollTop > offsetTop - 75) {
           var anchorId = anchors[i].getAttribute("id");
           var link = document.querySelector(
-            'nav ul li a[href="#' + anchorId + '"]'
+            'nav ul li a[href="#' + anchorId + '"]',
           );
           if (link) {
             link.classList.add("active-toc");
@@ -71,7 +71,7 @@
       }
     });
   }
-  setTimeout(scrollHandler, 100)
+  setTimeout(scrollHandler, 100);
 </script>
 
 <script defer>
