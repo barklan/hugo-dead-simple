@@ -61,8 +61,15 @@ body {
   margin: auto;
   padding: 0em 1em 2em 1em;
   /* font-family: "Open Sans", sans-serif; */
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI",
-    Helvetica, Arial, sans-serif;
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Roboto",
+    "Segoe UI",
+    Helvetica,
+    Arial,
+    sans-serif;
   line-height: 1.54;
 }
 
@@ -99,11 +106,12 @@ h1 {
 
 h2 {
   margin-bottom: 0.5em;
-  margin-top: 1.3em;
-  border-bottom: 1px solid var(--border-general);
+  margin-top: 1.4em;
+  /* border-bottom: 1px solid var(--border-general); */
+  text-decoration-line: underline;
   font-weight: normal;
   font-size: 1.6em;
-  font-family: "Linux Libertine", "Georgia", "Times", serif;
+  /* font-family: "Linux Libertine", "Georgia", "Times", serif; */
 }
 
 h3 {
@@ -176,7 +184,7 @@ th {
 
 /* MISC */
 .section-title {
-    border: 0;
+  border: 0;
 }
 
 .post-list {
