@@ -16,6 +16,8 @@
     {{ end }} {{ partial "tags.html" .}}
   </div>
 </div>
+{{ else }}
+<div style="padding-bottom: 1px;"></div>
 {{ end }}
 
 {{ if .Params.toc }}
