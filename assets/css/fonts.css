@@ -26,21 +26,11 @@
 	src: url('fonts/iosevka-regular.woff2') format('woff2');
 }
 
-/* @font-face { */
-/* 	font-family: 'Iosevka Web'; */
-/* 	font-display: swap; */
-/* 	font-weight: 400; */
-/* 	font-stretch: expanded; */
-/* 	font-style: normal; */
-/* 	src: url('fonts/iosevka-extended.woff2') format('woff2'); */
-/* } */
-
 @font-face {
 	font-family: 'Iosevka Web';
 	font-display: swap;
-	font-weight: 300;
+	font-weight: 400;
 	font-stretch: expanded;
 	font-style: normal;
-	src: url('/fonts/iosevka-extendedlight.woff2') format('woff2');
+	src: url('fonts/iosevka-extended.woff2') format('woff2');
 }
-
