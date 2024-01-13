@@ -33,7 +33,8 @@ code {
   font-family: "Iosevka Web", monospace;
 
   /* For Iosevka */
-  font-stretch: expanded;
+  /* font-stretch: expanded; */
+  font-stretch: normal;
 
   background: var(--code-background);
   border-radius: 5%;
