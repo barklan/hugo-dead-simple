@@ -40,14 +40,11 @@ code {
   border-radius: 5%;
   padding: 1px 4px;
   border: 1px solid var(--code-border);
-  font-size: calc(1em * 0.875);
+  font-size: 0.910em;
 }
 
 pre code {
-  /* font-size: 0.875em; */
-
-  /* For Iosevka */
-  font-size: 0.925em;
+  font-size: 0.875em;
   font-stretch: normal;
 
   border: none;
