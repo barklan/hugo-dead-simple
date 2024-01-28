@@ -274,7 +274,7 @@
 
 @font-face {
   font-family: "Iosevka Web";
-  font-display: swap;
+  font-display: block;
   font-weight: 400;
   font-stretch: normal;
   font-style: normal;
