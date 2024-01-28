@@ -18,3 +18,7 @@ Simple hugo theme to be dead easy on the reader.
 - Info boxes
 
 [Example site, overview of features and configuration.](https://rxsamira.netlify.app/post/hugo-dead-simple/)
+
+## TODO
+
+https://gohugo.io/content-management/mathematics/
