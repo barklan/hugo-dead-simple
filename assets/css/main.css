@@ -72,6 +72,7 @@ body {
     Arial,
     sans-serif;
   line-height: 1.54;
+  text-align: justify;
 }
 
 @media screen and (min-width: 760px) {
