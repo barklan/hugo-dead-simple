@@ -66,8 +66,7 @@
         (resources.Get "css/tables.css")
         (resources.Get "css/misc.css")
     | resources.Concat "style.css" | minify | fingerprint }}
-    <!-- <link rel="stylesheet" type="text/css" href="{{ $CSS.RelPermalink }}" media="all"> -->
-    <link rel="preload" as="style" type="text/css" href="{{ $CSS.RelPermalink }}" media="all">
+    <link rel="stylesheet" type="text/css" href="{{ $CSS.RelPermalink }}" media="all">
   </head>
 
   <body>
