@@ -27,6 +27,7 @@
 }
 
 .toc {
+  animation-duration: 1s;
   background: var(--toc-background) none repeat scroll 0 0;
   border: 1px solid var(--toc-border);
   display: table;
