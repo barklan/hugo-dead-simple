@@ -17,8 +17,8 @@ Simple hugo theme to be dead easy on the reader.
 - Katex math (inline and block)
 - Info boxes
 
-[Example site, overview of features and configuration.](https://rxsamira.netlify.app/post/hugo-dead-simple/)
+[Example site, overview of features and configuration.](https://hugo-dead-simple.netlify.app/post/hugo-dead-simple/)
 
 ## TODO
 
-https://gohugo.io/content-management/mathematics/
+- https://gohugo.io/content-management/mathematics/
