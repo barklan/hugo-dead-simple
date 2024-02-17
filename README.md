@@ -9,8 +9,8 @@ Simple hugo theme to be dead easy on the reader.
 
 ## Features
 
-- Light and dark themes
-- Everything is lazy loaded
+- Auto light and dark themes
+- Fast without bullshit - minified, minimal vanilla css, images are lazy-loaded, system fonts, no CDNs, functional without js if Katex is not used
 - Site-wide search
 - Keyboard-friendly: `h` to home, `t` to tags, `i` to search, `Tab` to navigate posts and search
 - Dynamic wiki-style table of contents
@@ -21,4 +21,4 @@ Simple hugo theme to be dead easy on the reader.
 
 ## TODO
 
-- https://gohugo.io/content-management/mathematics/
+- https://gohugo.io/content-management/mathematics/ (recent hugo)
