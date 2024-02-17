@@ -46,13 +46,6 @@
         }
     </style>
 
-
-    <link href="{{ relURL "fonts/Inter-Regular.woff2" }}" rel="preload" type="font/woff2" as="font" crossorigin="">
-    <link href="{{ relURL "fonts/Inter-Italic.woff2" }}" rel="preload" type="font/woff2" as="font" crossorigin="">
-    <link href="{{ relURL "fonts/Inter-Bold.woff2" }}" rel="preload" type="font/woff2" as="font" crossorigin="">
-    <link href="{{ relURL "fonts/Inter-SemiBold.woff2" }}" rel="preload" type="font/woff2" as="font" crossorigin="">
-    <link href="{{ relURL "fonts/iosevka-light.woff2" }}" rel="preload" type="font/woff2" as="font" crossorigin="">
-
     {{ $CSS := slice
         (resources.Get "css/main.css")
         (resources.Get "css/menu.css")
@@ -62,7 +55,6 @@
         (resources.Get "css/search.css")
         (resources.Get "css/rose.css")
         (resources.Get "css/code.css")
-        (resources.Get "css/fonts.css")
         (resources.Get "css/tables.css")
         (resources.Get "css/misc.css")
     | resources.Concat "style.css" | minify | fingerprint }}

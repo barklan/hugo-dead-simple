@@ -61,7 +61,7 @@ html {
 body {
   margin: auto;
   padding: 0em 1em 2em 1em;
-  /* font-family: "Open Sans", sans-serif; */
+  font-weight: 300;
   font-family:
     "Inter",
     -apple-system,
@@ -69,7 +69,6 @@ body {
     "Roboto",
     "Segoe UI",
     Helvetica,
-    Arial,
     sans-serif;
   line-height: 1.54;
   text-align: justify;
