@@ -30,7 +30,7 @@ pre {
 }
 
 code {
-  font-family: "Iosevka Light", monospace;
+  font-family: "Iosevka Thin", monospace;
 
   /* For Iosevka */
   /* font-stretch: expanded; */
@@ -44,7 +44,7 @@ code {
 }
 
 pre code {
-  font-size: 0.875em;
+  font-size: 0.900em;
   font-stretch: normal;
 
   border: none;
