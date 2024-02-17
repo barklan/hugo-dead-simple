@@ -1,6 +1,7 @@
 :root {
   --complimentary: #815205;
   --text: black;
+  --code: black;
   --text-dim: #444;
   --link: #3366cc;
   --link-visited: #795cb2;
@@ -19,6 +20,7 @@
   :root {
     --complimentary: #815205;
     --text: #d8d8d8;
+    --code: #cbcbcb;
     --text-dim: #a7a7a7;
     /* --link: #8cb4ff; */
     --link: #88a9e9;
@@ -98,7 +100,6 @@ p {
 }
 
 h1 {
-  font-family: "Linux Libertine", "Georgia", "Times", serif;
   font-weight: normal;
   margin-bottom: 0px;
   font-size: 2em;
@@ -108,11 +109,8 @@ h1 {
 h2 {
   margin-bottom: 0.5em;
   margin-top: 1.2em;
-  /* border-bottom: 1px solid var(--border-general); */
-  text-decoration-line: underline;
   font-weight: normal;
   font-size: 1.6em;
-  /* font-family: "Linux Libertine", "Georgia", "Times", serif; */
 }
 
 h3 {
