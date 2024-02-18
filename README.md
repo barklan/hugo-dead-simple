@@ -2,7 +2,7 @@
 
 Simple hugo theme designed to be dead easy on the reader.
 
-General idea is to stay of enshittifying: no icons, less whitespace, less colors, links are blue, etc...
+General idea is to stay of enshittifying trend: no icons, less whitespace, less colors, links are blue, etc...
 
 <img src="https://raw.githubusercontent.com/barklan/hugo-dead-simple/main/images/screenshot.png"/>
 
