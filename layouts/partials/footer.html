@@ -3,20 +3,6 @@
 <footer>
 {{ partial "footer_scripts.html" . }}
 {{ partial "search-index.html" . }}
-
-{{ if .Site.Params.quickLink }}
-    <script src="{{ relURL "js/quicklink.umd.js" }}"></script>
-    <script>
-      window.addEventListener('load', () => {
-        const options = {
-          throttle: 3,
-          delay: 300,
-        };
-        quicklink.listen(options);
-      });
-    </script>
-{{ end }}
-
 </footer>
 
 </body>
