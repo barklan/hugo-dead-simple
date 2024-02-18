@@ -19,6 +19,7 @@ General idea is to stay of enshittifying trend: no icons, less whitespace, less 
 - Info boxes
 - Columns / Tabs
 - Copy buttons on code blocks
+- Mobile-friendly
 
 [Example site, overview of features and configuration.](https://hugo-dead-simple.netlify.app/post/hugo-dead-simple/) \
 [Example site repo.](https://github.com/barklan/hugo-dead-simple-example)
