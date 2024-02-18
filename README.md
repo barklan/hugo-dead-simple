@@ -1,6 +1,6 @@
 # Hugo Dead Simple
 
-Simple hugo theme to be dead easy on the reader.
+Simple hugo theme designed to be dead easy on the reader.
 
 <img src="https://raw.githubusercontent.com/barklan/hugo-dead-simple/main/images/screenshot.png"/>
 
