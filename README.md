@@ -13,6 +13,10 @@ Simple hugo theme to be dead easy on the reader.
 - Dynamic wiki-style table of contents
 - Katex math (inline and block)
 - Info boxes
+- Attachments
+- Info boxes
+- Columns / Tabs
+- Copy buttons on code blocks
 
 [Example site, overview of features and configuration.](https://hugo-dead-simple.netlify.app/post/hugo-dead-simple/) \
 [Example site repo.](https://github.com/barklan/hugo-dead-simple-example)
