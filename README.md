@@ -2,9 +2,7 @@
 
 Simple hugo theme to be dead easy on the reader.
 
-<p align="middle">
-  <img src="https://raw.githubusercontent.com/barklan/hugo-dead-simple/main/images/screenshot.png" width="49%"/>
-</p>
+<img src="https://raw.githubusercontent.com/barklan/hugo-dead-simple/main/images/screenshot.png" width="49%"/>
 
 ## Features
 
