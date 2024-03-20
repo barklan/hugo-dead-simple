@@ -30,7 +30,7 @@ pre {
 }
 
 code {
-  font-family: "Iosevka Light", monospace;
+  font-family: monospace;
   color: var(--code);
 
   /* For Iosevka */
