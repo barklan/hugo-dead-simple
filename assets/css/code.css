@@ -41,13 +41,11 @@ code {
   border-radius: 5%;
   padding: 1px 4px;
   border: 1px solid var(--code-border);
-  /* font-size: 0.920em; */
-  font-size: 1em;
+  font-size: 0.960em;
 }
 
 pre code {
-  font-size: 1em;
-  /* font-size: 0.900em; */
+  font-size: 0.950em;
   font-stretch: normal;
 
   border: none;
