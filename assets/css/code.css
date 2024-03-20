@@ -42,9 +42,11 @@ code {
   padding: 1px 4px;
   border: 1px solid var(--code-border);
   /* font-size: 0.920em; */
+  font-size: 1em;
 }
 
 pre code {
+  font-size: 1em;
   /* font-size: 0.900em; */
   font-stretch: normal;
 
