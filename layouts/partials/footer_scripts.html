@@ -38,10 +38,21 @@
 
 <!-- Dynamic toc. -->
 <script defer>
+  function throttle(fn, wait) {
+    var time = Date.now();
+    return function () {
+      var now = Date.now()
+      if (time + wait - now < 0) {
+        fn();
+        time = now;
+      }
+    };
+  }
+
   function scrollHandler() {
     const anchors = Array.from(document.querySelectorAll("body h2, body h3"));
 
-    window.addEventListener("scroll", function () {
+    function scrollCallback() {
       var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
       // Highlight the last scrolled-to: set everything inactive first
@@ -69,7 +80,12 @@
           }
         }
       }
-    });
+    }
+
+    window.addEventListener(
+      "scroll",
+      throttle(scrollCallback, 300),
+    );
   }
   setTimeout(scrollHandler, 100);
 </script>
