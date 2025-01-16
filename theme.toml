@@ -26,6 +26,3 @@ min_version = "0.83.0"
 [author]
     name = "Gleb Buzin"
     homepage = "https://github.com/barklan"
-
-[params]
-    show_search = true
