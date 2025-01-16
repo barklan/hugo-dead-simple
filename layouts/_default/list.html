@@ -4,7 +4,7 @@
 
 {{ if .IsHome }}
     <!--TODO: replace with faster search-->
-    {{ if not .Site.Params.no_search }}
+    {{ if not .Site.Params.noSearch }}
         {{ partial "search-form.html" . }}
         <ul id="results"></ul>
     {{ end }}
