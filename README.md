@@ -10,7 +10,7 @@ General idea is to stay off of enshittifying trend: no icons, less whitespace, l
 
 - Auto light and dark themes
 - Fast without bullshit - minified, minimal vanilla css, images are lazy-loaded, system fonts, no CDNs, functional without js if Katex is not used
-- Site-wide search
+- Site-wide search (can be disabled)
 - Keyboard-friendly: `h` to home, `t` to tags, `i` to search, `Tab` to navigate posts and search
 - Dynamic wiki-style table of contents
 - Katex math (inline and block)
