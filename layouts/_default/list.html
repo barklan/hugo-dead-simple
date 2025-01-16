@@ -4,8 +4,10 @@
 
 {{ if .IsHome }}
     <!--TODO: replace with faster search-->
-    {{ partial "search-form.html" . }}
-    <ul id="results"></ul>
+    {{ if .Site.Params.show_search }}
+        {{ partial "search-form.html" . }}
+        <ul id="results"></ul>
+    {{ end }}
 
     {{ range .Sections }}
         <h2 class="section-title">{{ .CurrentSection.Title }}</h2>
