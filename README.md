@@ -9,11 +9,12 @@ General idea is to stay off of enshittifying trend: no icons, less whitespace, l
 ## Features
 
 - Auto light and dark themes
-- Fast without bullshit - minified, minimal vanilla css, images are lazy-loaded, system fonts, no CDNs, functional without js if Katex is not used
+- Fast without bullshit - minified, minimal vanilla css, images are lazy-loaded, system fonts, no CDNs, functional without js
+- Server side rendering of mathematical and chemical equations (using KaTeX)
 - Site-wide search (can be disabled)
 - Keyboard-friendly: `h` to home, `t` to tags, `i` to search, `Tab` to navigate posts and search
 - Dynamic wiki-style table of contents
-- Katex math (inline and block)
+- KaTeX math (inline and block)
 - Info boxes
 - Attachments
 - Info boxes
@@ -23,7 +24,3 @@ General idea is to stay off of enshittifying trend: no icons, less whitespace, l
 
 [Example site, overview of features and configuration.](https://hugo-dead-simple.netlify.app/post/hugo-dead-simple/) \
 [Example site repo.](https://github.com/barklan/hugo-dead-simple-example)
-
-## TODO
-
-- https://gohugo.io/content-management/mathematics/ (recent hugo)
