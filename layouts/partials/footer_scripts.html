@@ -41,7 +41,7 @@
   function throttle(fn, wait) {
     var time = Date.now();
     return function () {
-      var now = Date.now()
+      var now = Date.now();
       if (time + wait - now < 0) {
         fn();
         time = now;
@@ -82,10 +82,7 @@
       }
     }
 
-    window.addEventListener(
-      "scroll",
-      throttle(scrollCallback, 200),
-    );
+    window.addEventListener("scroll", throttle(scrollCallback, 200));
   }
   setTimeout(scrollHandler, 100);
 </script>
@@ -93,7 +90,10 @@
 <script defer>
   function addCopyButtonToCodeBlocks() {
     // Get all code blocks with a class of "language-*"
-    const codeBlocks = document.querySelectorAll('code[class^="language-"]');
+    // const codeBlocks = document.querySelectorAll('code[class^="language-"]');
+    const codeBlocks = document.querySelectorAll(
+      'code[class^="language-"]:not(.output):not([class*="language-console"])',
+    );
 
     codeBlocks.forEach((codeBlock) => {
       const copyButton = document.createElement("button");

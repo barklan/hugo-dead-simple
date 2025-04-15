@@ -14,6 +14,7 @@
   --table-tr: #edeff2;
   --toc-background: #f9f9f9;
   --toc-border: #aaa;
+  --output-background: #e8e8e8;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -33,6 +34,7 @@
     --table-tr: #343434;
     --toc-background: #343434;
     --toc-border: #495057;
+    --output-background: #020202;
   }
 }
 
