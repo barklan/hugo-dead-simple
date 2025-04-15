@@ -100,7 +100,7 @@ pre code {
 }
 
 .output code {
-  color: var(--complimentary);
+  color: var(--output-foreground);
   line-height: 1;
 }
 
