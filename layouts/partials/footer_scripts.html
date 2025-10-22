@@ -88,6 +88,20 @@
 </script>
 
 <script defer>
+  function getTextContentRecursively(element) {
+    let text = '';
+
+    if (element.nodeType === Node.TEXT_NODE) {
+      return element.textContent || '';
+    }
+
+    for (const child of element.childNodes) {
+      text += getTextContentRecursively(child);
+    }
+
+    return text;
+  }
+
   function addCopyButtonToCodeBlocks() {
     // Get all code blocks with a class of "language-*"
     // const codeBlocks = document.querySelectorAll('code[class^="language-"]');
@@ -103,11 +117,7 @@
       // Add a click event listener to the copy button
       copyButton.addEventListener("click", () => {
         // Copy the code inside the code block to the clipboard
-        const elements = codeBlock.querySelectorAll(".cl");
-        let codeToCopy = "";
-        elements.forEach((element) => {
-          codeToCopy += element.innerText;
-        });
+        const codeToCopy = getTextContentRecursively(codeBlock);
         navigator.clipboard.writeText(codeToCopy);
 
         // Update the copy button text to indicate that the code has been copied
